@@ -583,6 +583,12 @@ img.cursor {
   animation-timing-function: steps(5);
   visibility: hidden;
 }
+.cursorScene .cursor {
+  top: -100px;
+  width: 140px;
+  margin-left: 300px;
+  position: absolute;
+}
 .gill {
   width: 250px;
   position: absolute;
