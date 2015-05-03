@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adventures through Type and Space</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/site-dist.js"></script>
+    <script src="js/js-cookie.js"></script>
+    <script src="js/switchboard-dist.js"></script>
+    <script src="js/conversations-dist.js"></script>
+  </head>
+  <body>
+    <audio src="manonfire.mp3"></audio>
+    <h1 id="logo">Adventures through Type and Space</h1>
+    <h2 id="reset">Reset</h2>
+    <script>
+      var charName = "Dan";
+      var progressArray = new Array();
+      $( "#logo" ).click(function() {
+      	$( "#wrapper" ).load( "hospital.html" );  
+      });
+      /* if (Cookies.get('current')){
+      	var progressArray = Cookies.get('progress');
+      } else {
+      	var progressArray[0] = ["1"];
+      	Cookies.set('progress', progressArray.join(""), { expires: 15 });
+      }; */x
+      
+    </script>
+    <div id="wrapper">
+      <script>
+        if (Cookies.get('current')){
+        	$( "#wrapper" ).load( Cookies.get('current') + ".html" );
+        	var progressArray = Cookies.get('progress')
+        } else {
+        	$( "#wrapper" ).load( "intro.html" );
+        
+        };
+      </script>
+    </div>
+    <div id="menuWrapper">
+      <div id="menu" class="hidden modal"><span>Menu</span><span class="x">X</span>
+        <h2 class="characterName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/DingbatDan.png" alt="Dingbat Dan" class="character">
+        <p class="status"><span class="health">Health: 34/50</span><span class="exp">Exp: 300/500</span></p>
+        <p class="items">Items:<span class="item">,</span><span class="item">$</span><span class="item">*</span><span class="item">H</span></p>
+        <p class="progress"></p>
+        <p class="cookie"></p>
+        <p class="current">current</p>
+        <p class="lc"></p>
+      </div>
+      <script>
+        $( ".x" ).click(function() {
+        		$( "#menu" ).addClass( "hidden" );
+        });
+        $( "#reset" ).click(function() {
+        	Cookies.remove('progress', { expires: 15, path: '/'});
+        	Cookies.remove('current', { expires: 15, path: '/'});
+        	$( "#wrapper" ).load( "intro.html" );
+        });
+      </script>
+    </div>
+  </body>
+</html>

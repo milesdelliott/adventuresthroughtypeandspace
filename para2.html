@@ -1,0 +1,39 @@
+
+<div class="para screenview">
+  <div class="background"><img src="backgrounds/para2.png" alt="Paratrooper"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/wendy_side_medium.png" alt="wendy_side_medium" class="wendy_side_medium"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Whew, last time I ever try to build a flying machine, here take my parachute, I'm never going to use it again, too dangerous!"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Thanks</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">No Thanks</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "para2", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "para2", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "para2", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>
+<script>
+  if (charName === "Dan") {
+  	$(".wendy_side_medium").attr('src', 'foregrounds/dan_side_medium.png');
+  }
+</script>

@@ -1,0 +1,35 @@
+
+<div class="port screenview">
+  <div class="background"><img src="backgrounds/port_gill.png" alt="Port Gill"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/gill.png" alt="gill" class="gill"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Afternoon M'Lord, names Eric n this is my pride n joy, the S.S. Gill Sans. We can depart as soon as you board"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Great, l'ets go</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Tell me about yourself</td>
+      <td class="3">Go back to the crossroads</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "port_gill", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "port_gill", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "port_gill", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

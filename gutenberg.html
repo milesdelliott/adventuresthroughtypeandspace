@@ -1,0 +1,34 @@
+
+<div class="castle screenview">
+  <div class="background"><img src="backgrounds/castle_fight1.png" alt="Gutenberg"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"WHO DARES TO INTERFERE WITH MY PRESSES"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Not me</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Run!</td>
+      <td class="3">FIGHT</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "gutenberg", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "gutenberg", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "gutenberg", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

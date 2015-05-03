@@ -1,0 +1,32 @@
+
+<div class="bodoni screenview">
+  <div class="background"><img src="backgrounds/fashion_school.png" alt="At the Fashion School"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You are at the Fashion School</p>
+  <table class="control">
+    <tr>
+      <td class="1">Back to Town</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "fashion_school", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "fashion_school", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "fashion_school", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

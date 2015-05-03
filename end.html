@@ -1,0 +1,37 @@
+
+<div class="castle screenview">
+  <div class="background"><img src="backgrounds/throne.png" alt="the End"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="varitext">Dingbat Dan</span> went on to Revolutionize the world of type</p>
+  <table class="control">
+    <tr>
+      <td class="1">Credits</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "end", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "end", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "end", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>
+<script>
+  if (progressArray[12] === 2) {
+  	$('.varitext').html('<span class="varitext">Wingding Wendy</span> went on to Revolutionize the world of type'')
+  }
+</script>

@@ -1,0 +1,35 @@
+
+<div class="port screenview">
+  <div class="background"><img src="backgrounds/port_eurostile.png" alt="Port Eurostile"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/novarese.png" alt="novarese" class="novarese"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"WELCOME TO EUROSTILE SPACE, THE MOST ADVANCED IN SPACE TECHNOLOGY"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Cool</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Time to go</td>
+      <td class="3">Back to the crossroads</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "port_eurostile", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "port_eurostile", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "port_eurostile", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

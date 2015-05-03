@@ -1,0 +1,33 @@
+
+<div class="city screenview">
+  <div class="background"><img src="backgrounds/city.png" alt="The City"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/frutiger2-01.png" alt="frutiger2-01" class="frutiger2-01"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"You have angered me, you will be defeated!"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Fight Harder</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "city_fight1", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "city_fight1", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "city_fight1", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

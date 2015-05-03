@@ -1,0 +1,116 @@
+
+<div class="cursor screenview">
+  <script>
+    var convCursor = [
+    		[
+    			'Before you stands the cursor, glowing with power, in a booming voice it adresses you:<br \/> <span class="quote">"That was very foolish ' + charName + '"</span>',
+    			'"Ugh"',
+    			'"Wha? What Happened?"',
+    			'"I had it all under control"',
+    			1,
+    			1,
+    			3,
+    			0
+    		],
+    		[
+    			'<span class="quote">"You tried to construct your own typeface, but it was not put together well enough, it collapsed under its ill designed weight."</span>',
+    			'"Oh"',
+    			'"No, it was the pirate!"',
+    			'"I see"',
+    			2,
+    			2,
+    			2,
+    			0
+    		],
+    		[
+    			'<span class="quote">"The pirate cerainly wasn\'t helping, but your project would have failed regardless."</span>',
+    			'"I suppose I should give up"',
+    			'"Why?"',
+    			'"Yeah whatever..."',
+    			3,
+    			3,
+    			3,
+    			0
+    		],
+    		[
+    			'<span class="quote">"I\'ve been watching you ' + charName+ '. You have the potential to be one of the greatest Typographers the world of Design has ever seen"</span>',
+    			'"Really?"',
+    			'"You think so?"',
+    		  '"I knew it!"',
+    		  4,
+    		  4,
+    		  4,
+    		  0
+    		],
+    		[
+    			'<span class="quote">"BUT YOU LACK DISCIPLINE! If you don\'t learn your fundamentals and history you will keep making the same mistakes"</span>',
+    		  '"What can I do?"',
+    		  '"History? Type?"',
+    		  '"You\'re a big help"',
+    		  5,
+    		  5,
+    		  5,
+    		  0
+    		  ],
+    		[
+    			'<span class="quote">"The world is in peril ' + charName+ '. Shoddy type is everywhere, the pirate grows bolder, and the funamentals are being forgotten."</span>',
+    		  '"..."',
+    		  '"..."',
+    		  '"..."',
+    		  6,
+    		  6,
+    		  6,
+    		  0
+    		  ],
+    		[
+    			'<span class="quote">"We need a hero, I beleive that hero is you ' + charName+ '. You must adventure with me to stop the pirate and discover the source of all Typography!"</span>',
+    		  '"Let\'s do it!"',
+    		  '"Alright!"',
+    		  '"No"',
+    		  6,
+    		  6,
+    		  6,
+    		  1
+    		  ]
+    	];	
+  </script>
+  <div class="background"><img src="backgrounds/cursor.png" alt="cursor"/></div>
+  <div class="foreground">
+    <div class="layer"></div>
+  </div>
+  <div class="controlWrapper cursorQ">
+    <p class="text">Before you stands the cursor, glowing with power, in a booming voice it adresses you:<br /> <span class="quote">"That was very foolish <span class="varitext">Wendy</span>"</span></p>
+    <table class="control">
+      <tr>
+        <td class="1">What</td>
+        <td class="4">Menu</td>
+      </tr>
+      <tr> 
+        <td class="2">What</td>
+        <td class="3">What</td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    var convoCurrent = 0;
+    var convo = "convCursor";
+    
+    $('.text').html(convCursor[0][0]);
+    $('.1').html(convCursor[0][1]);
+    $('.2').html(convCursor[0][2]);
+    $('.3').html(convCursor[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "cursor", progressArray, convoCurrent, convCursor);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "cursor", progressArray, convoCurrent, convCursor);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "cursor", progressArray, convoCurrent, convCursor);
+    });   
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    }); 
+  </script>
+</div>

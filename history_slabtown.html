@@ -1,0 +1,34 @@
+
+<div class="slabtown screenview">
+  <div class="background"><img src="backgrounds/history_slabtown.png" alt="History of Slabtown"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">Slab serifs were commonly used with wood type</p>
+  <table class="control">
+    <tr>
+      <td class="1">Cool</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Nice</td>
+      <td class="3">Bye</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "history_slabtown", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "history_slabtown", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "history_slabtown", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

@@ -1,0 +1,35 @@
+
+<div class="city screenview">
+  <div class="background"><img src="backgrounds/desk.png" alt="A Meeting with Adrian Frutiger"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/frutiger1-01.png" alt="frutiger1-01" class="frutiger1-01"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Are you here to steal my typefaces! I do not suffer pirates"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">No, I swear!</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">what?</td>
+      <td class="3">Take it back!</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "frutiger", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "frutiger", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "frutiger", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

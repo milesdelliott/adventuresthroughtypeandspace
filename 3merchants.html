@@ -1,0 +1,41 @@
+
+<div class="swiss screenview">
+  <div class="background"><img src="backgrounds/fallen.png" alt="Three Merchants"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_fall.png" alt="dan_fall" class="dan_fall"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"I think he's dead"</span>...<span class="quote">"No, wait, he is moving"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Ugh</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">ow</td>
+      <td class="3">Please help</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "3merchants", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "3merchants", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "3merchants", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_fall").attr('src', 'foregrounds/wendy_fall.png');
+  	$('.text').html('<span class="quote">"I think she\'s dead"</span>...<span class="quote">"No, wait, she is moving"</span>')
+  }
+</script>

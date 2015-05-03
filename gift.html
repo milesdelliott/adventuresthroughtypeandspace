@@ -1,0 +1,34 @@
+
+<div class="city screenview">
+  <div class="background"><img src="backgrounds/gift.png" alt="Get a Gift"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You get a Gift</p>
+  <table class="control">
+    <tr>
+      <td class="1">Get the Section</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Get the Yen</td>
+      <td class="3">Get the Dagger</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "gift", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "gift", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "gift", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

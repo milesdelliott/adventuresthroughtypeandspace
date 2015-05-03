@@ -1,0 +1,34 @@
+
+<div class="slabtown screenview">
+  <div class="background"><img src="backgrounds/slab_sheriff.png" alt="Sheriff of Slabtown"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Welcome to Slabtown, you are just in time to see the hanging."</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Hanging?</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Excellent</td>
+      <td class="3">Who is being Hung?</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "slab_sheriff", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "slab_sheriff", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "slab_sheriff", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

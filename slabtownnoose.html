@@ -1,0 +1,33 @@
+
+<div class="slabtown screenview">
+  <div class="background"><img src="backgrounds/slabtownnoose.png" alt="The Slabtown Hanging"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">An Innocent man is about to be Hung!</p>
+  <table class="control">
+    <tr>
+      <td class="1">Stop it!</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Let him Hang</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "slabtownnoose", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "slabtownnoose", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "slabtownnoose", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

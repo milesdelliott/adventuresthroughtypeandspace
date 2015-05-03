@@ -1,0 +1,33 @@
+
+<div class="moon_up screenview">
+  <div class="background"><img src="backgrounds/moon.png" alt="Luna"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/spaceship.png" alt="spaceship" class="spaceship"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You leave the moon</p>
+  <table class="control">
+    <tr>
+      <td class="1">Goodbye Moon</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "moon_up", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "moon_up", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "moon_up", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

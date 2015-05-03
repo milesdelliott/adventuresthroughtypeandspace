@@ -1,0 +1,35 @@
+
+<div class="bodoni screenview">
+  <div class="background"><img src="backgrounds/prize.png" alt="prize"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/didot.png" alt="didot" class="didot"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"You have a real knack for this thing, choose one for your prize"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Yen</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Dagger</td>
+      <td class="3">Section</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "prize", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "prize", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "prize", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

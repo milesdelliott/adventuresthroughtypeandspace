@@ -1,0 +1,38 @@
+
+<div class="hirez screenview">
+  <div class="background"><img src="backgrounds/bed.png" alt="A Hospital in Hi Rez"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/wendy_cast.png" alt="wendy_cast" class="wendy_cast"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You wake up slightly dazed in a Hospital</p>
+  <table class="control">
+    <tr>
+      <td class="1">Look Around</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "hospital", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "hospital", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "hospital", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>
+<script>
+  if (charName === "Dan") {
+  	$(".wendy_cast").attr('src', 'foregrounds/dan_cast.png');
+  }
+</script>

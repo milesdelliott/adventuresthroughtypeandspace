@@ -1,0 +1,33 @@
+
+<div class="baskerville screenview">
+  <div class="background"><img src="backgrounds/library_outside.png" alt="The Baskerville"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">The quaint town of Baskerville</p>
+  <table class="control">
+    <tr>
+      <td class="1">Hang out</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Head to the Library</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "baskervillage", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "baskervillage", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "baskervillage", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

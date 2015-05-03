@@ -1,0 +1,35 @@
+
+<div class="anim screenview">
+  <div class="background"><img src="backgrounds/bluesky.png" alt="anim"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/anim2.gif" alt="layer" class="anim_layer"/><img src="foregrounds/park.png" alt="layer" class="park"/><img src="foregrounds/workinfigureg.gif" alt="layer" class="workinfigure"/><img src="foregrounds/jumpingfigure.gif" alt="layer" class="jumpingfigure"/><img src="foregrounds/piratewalking.gif" alt="layer" class="piratewalking"/><img src="foregrounds/piratestealing.gif" alt="layer" class="piratestealing"/><img src="foregrounds/piratewalking.gif" alt="layer" class="piratewalk2"/><img src="foregrounds/figure_falling.gif" alt="layer" class="figure_falling"/><img src="foregrounds/ground_figure.png" alt="layer" class="figure_ground"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"> </p>
+  <table class="control">
+    <tr>
+      <td class="wide_button hidden">Continue</td>
+    </tr>
+  </table>
+</div>
+<script>
+  preloadimages(['foregrounds/anim_final.gif'])
+  setTimeout(function(){
+  $( ".wide_button" ).removeClass( "hidden" );
+  $(".anim_layer").attr('src', 'foregrounds/anim_final.gif');
+  },6700);
+  $( ".wide_button" ).on( "click", function(evt) {
+  	switchBoard(1, "anim", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "anim", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "anim", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

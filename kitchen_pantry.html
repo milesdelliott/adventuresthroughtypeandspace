@@ -1,0 +1,34 @@
+
+<div class="hirez screenview">
+  <div class="background"><img src="backgrounds/kitchen_pantry.png" alt="Your Kitchen"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">Get food from pantry</p>
+  <table class="control">
+    <tr>
+      <td class="1">Chips</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Cookie</td>
+      <td class="3">Trail Mix</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "kitchen_pantry", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "kitchen_pantry", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "kitchen_pantry", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

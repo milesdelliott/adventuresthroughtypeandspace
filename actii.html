@@ -1,0 +1,33 @@
+
+<div class="act screenview">
+  <div class="background"></div>
+  <div class="foreground">
+    <p class="quote">"There are now about as many different varieties of letters as there are different kinds of fools" <br /><span class="quotename">&nbsp;&nbsp;&nbsp;&nbsp;&ndash;Eric Gill</span></p>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p>ACT II</p>
+  <table class="control">
+    <tr>
+      <td class="1">Continue on your Journey</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "actii", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "actii", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "actii", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

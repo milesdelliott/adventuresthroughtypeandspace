@@ -1,0 +1,33 @@
+
+<div class="wild screenview">
+  <div class="background"><img src="backgrounds/random.png" alt="RANDOM ENCOUNTER"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">A bandit demands all of your belongings</p>
+  <table class="control">
+    <tr>
+      <td class="1">Fight</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Run</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "random1", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "random1", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "random1", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

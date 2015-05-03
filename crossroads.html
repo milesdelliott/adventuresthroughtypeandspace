@@ -1,0 +1,35 @@
+
+<div class="crossroads screenview">
+  <div class="background"><img src="backgrounds/crossroads.png" alt="The Crossroads"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_side_big.png" alt="dan_side_big" class="dan_side_big"/></div>
+    <div class="layer"><img src="foregrounds/cursor.png" alt="cursor" class="cursor"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You come upon a fork in the road</p>
+  <table class="control">
+    <tr>
+      <td class="1">Towards the City of Chicago</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Towards the city of OCR-B</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "crossroads", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "crossroads", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "crossroads", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

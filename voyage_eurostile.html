@@ -1,0 +1,35 @@
+
+<div class="space screenview">
+  <div class="background"><img src="backgrounds/voyage_eurostile.png" alt="Voyage Eurostile"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/novarese.png" alt="novarese" class="novarese"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"THE COMPUTER HAS GONE CRAZY, WE HAVE TO STOP IT"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Cut the Red Wire</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Wipe the data Banks</td>
+      <td class="3">Cry</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "voyage_eurostile", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "voyage_eurostile", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "voyage_eurostile", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

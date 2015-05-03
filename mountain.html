@@ -1,0 +1,34 @@
+
+<div class="wild screenview">
+  <div class="background"><img src="backgrounds/mountain.png" alt="A Mountain Crossroads"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">The path splits three ways towards the port cities that serve the Sans Sea</p>
+  <table class="control">
+    <tr>
+      <td class="1">to Port Gill</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">to Port Futura</td>
+      <td class="3">to Port Eurostile</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "mountain", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "mountain", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "mountain", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

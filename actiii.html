@@ -1,0 +1,33 @@
+
+<div class="act screenview">
+  <div class="background"></div>
+  <div class="foreground">
+    <p class="quote">"Give me 26 soldiers of lead and I will conquer the world"<br /><span class="quotename">&nbsp;&nbsp;&nbsp;&nbsp;&ndash;Unknown</span></p>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p>ACT III</p>
+  <table class="control">
+    <tr>
+      <td class="1">Continue on your Journey</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "actiii", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "actiii", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "actiii", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

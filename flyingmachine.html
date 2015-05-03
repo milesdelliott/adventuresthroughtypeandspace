@@ -1,0 +1,33 @@
+
+<div class="cliff screenview">
+  <div class="background"><img src="backgrounds/cliff.png" alt="Building a Flying Machine"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/flying_machine.png" alt="flying_machine" class="flying_machine"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">The path ends at the cliff, you have to find a way around</p>
+  <table class="control">
+    <tr>
+      <td class="1">Take off!</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "flyingmachine", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "flyingmachine", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "flyingmachine", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

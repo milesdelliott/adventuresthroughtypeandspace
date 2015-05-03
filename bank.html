@@ -1,0 +1,33 @@
+
+<div class="swiss screenview">
+  <div class="background"><img src="backgrounds/bank_inner.png" alt="Inside the Bank Vault"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">It's the Pirate!</p>
+  <table class="control">
+    <tr>
+      <td class="1">Stop Him</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Let him go</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "bank_inner", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "bank_inner", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "bank_inner", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

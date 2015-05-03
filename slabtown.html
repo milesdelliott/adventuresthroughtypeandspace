@@ -1,0 +1,34 @@
+
+<div class="slabtown screenview">
+  <div class="background"><img src="backgrounds/slabtown.png" alt="The Slabtown"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">You are in the Jurisdiction of the Slab Sheriff</p>
+  <table class="control">
+    <tr>
+      <td class="1">Saloon</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Shop</td>
+      <td class="3">Visit the Sheriff</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "slabtown", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "slabtown", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "slabtown", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

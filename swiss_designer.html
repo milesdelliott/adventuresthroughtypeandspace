@@ -1,0 +1,32 @@
+
+<div class="swiss screenview">
+  <div class="background"><img src="backgrounds/gift.png" alt="Congratulations"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"We are eternally greatful for your help, please take this item as a gesture of our gratitude"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Thanks!</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "swiss_designer", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "swiss_designer", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "swiss_designer", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

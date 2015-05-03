@@ -1,0 +1,32 @@
+
+<div class="swamp screenview">
+  <div class="background"><img src="backgrounds/swamp2.png" alt="Swamp of Shitty Fonts"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Be careful, they can be contagious"</span></p>
+  <table class="control">
+    <tr>
+      <td class="1">Continue on your Journey</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "swamp2", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "swamp2", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "swamp2", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

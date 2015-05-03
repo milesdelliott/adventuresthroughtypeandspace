@@ -1,0 +1,33 @@
+
+<div class="castle screenview">
+  <div class="background"><img src="backgrounds/castle_fight2.png" alt="Fight!"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text">There he is, put an end to his life of crime!</p>
+  <table class="control">
+    <tr>
+      <td class="1">Fight</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr>
+      <td class="2">Shoot</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "castle_fight2", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "castle_fight2", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "castle_fight2", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>
