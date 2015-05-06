@@ -1,0 +1,26 @@
+
+<div class="death screenview">
+  <div class="background"></div>
+  <div class="foreground">
+    <p class="quote">"DEATH" <br /><span class="quotename">&nbsp;&nbsp;&nbsp;&nbsp;&ndash;DEATH</span></p>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p>I'm sorry but you have perished on your journey</p>
+  <table class="control">
+    <tr>
+      <td class="1">Continue from checkpoint</td>
+      <td class="4">Menu</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".4" ).on( "click", function(evt) {
+  		$( "#menu" ).toggleClass( "hidden" )
+  		$( '.progress' ).html(progressArray);
+  });
+  $( ".1" ).on( "click", function(evt) {
+  	$( "#wrapper" ).load( saveCurrent + ".html" );
+  	deathHandler();
+  });
+</script>

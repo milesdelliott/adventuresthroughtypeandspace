@@ -12,7 +12,11 @@ function preloadimages(arr){
 preloadimages(['backgrounds/cursor.png', 'backgrounds/hirez.png', 'backgrounds/swamp.png', 'backgrounds/swamp2.png', 'backgrounds/crossroads.png', 'backgrounds/city.png', 'backgrounds/shop.png', 'backgrounds/gift.png', 'backgrounds/bodoni.png', 'backgrounds/fashionshow.png', 'backgrounds/slabtown.png', 'backgrounds/moon.png', 'backgrounds/slabtownnoose.png', 'foregrounds/spaceship.png', 'foregrounds/frutiger1-01.png', 'foregrounds/frutiger2-01.png', 'foregrounds/frutiger3-01.png'])
 function switchBoard(input, current, progress) {
 	var next = "intro";
-	if (current === "intro") {
+	
+	if (cStatus.health <= 0) {
+			next = "death";
+	}
+	else if (current === "intro") {
 		if (input === 1) {
 			next = "anim";
 		}
@@ -409,7 +413,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "bank") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[30] = input;
 			next = "bank_inner";
@@ -418,7 +422,7 @@ function switchBoard(input, current, progress) {
 	 else if (current === "bank_inner") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[68] = input;
 			next = "swiss_designer";
@@ -427,7 +431,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "swiss_designer") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[31] = input;
 			next = "mountain";
@@ -436,7 +440,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "mountain") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[32] = input;
 			next = "port_gill";
@@ -453,7 +457,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "port_gill") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[33] = input;
 			next = "voyage_gill";
@@ -467,10 +471,13 @@ function switchBoard(input, current, progress) {
 			next = "mountain";
 		}
 	}
+	else if (current === "voyage_gill") {
+		next = "death";
+	}
 	else if (current === "port_futura") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[34] = input;
 			next = "moon";
@@ -487,7 +494,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "port_eurostile") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[35] = input;
 			next = "voyage_eurostile";
@@ -504,7 +511,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "moon") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[36] = input;
 			next = "moon_up";
@@ -513,7 +520,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "voyage_eurostile") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[37] = input;
 			next = "bodoni";
@@ -522,7 +529,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "moon_up") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[38] = input;
 			next = "bodoni";
@@ -531,7 +538,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "bodoni") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[39] = input;
 			next = "fashionshow";
@@ -544,7 +551,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "fashion_school") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[39] = input;
 			next = "bodoni";
@@ -553,7 +560,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "fashionshow") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[39] = input;
 			next = "prize";
@@ -562,7 +569,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "prize") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[40] = input;
 			next = "slabtown";
@@ -571,7 +578,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "random3") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[41] = input;
 			next = "slabtown";
@@ -580,7 +587,7 @@ function switchBoard(input, current, progress) {
 		else if (current === "slabtown") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[42] = input;
 			next = "history_slabtown";
@@ -597,7 +604,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "history_slabtown") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[43] = input;
 			next = "slabtown";
@@ -606,7 +613,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "shop_slabtown") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[45] = input;
 			next = "slabtown";
@@ -615,7 +622,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "slab_sheriff") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[46] = input;
 			next = "slabtownnoose";
@@ -624,7 +631,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "slabtownnoose") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[47] = input;
 			next = "escape_slabtown";
@@ -633,7 +640,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "escape_slabtown") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[48] = input;
 			next = "actiii";
@@ -642,7 +649,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "actiii") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[49] = input;
 			next = "forest";
@@ -651,7 +658,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "actiii") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[50] = input;
 			next = "forest";
@@ -660,7 +667,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "actiii") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[51] = input;
 			next = "forest";
@@ -669,7 +676,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "random4") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[52] = input;
 			next = "forest";
@@ -678,7 +685,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "forest") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[53] = input;
 			next = "baskervillage";
@@ -687,7 +694,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "baskervillage") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[54] = input;
 			next = "library";
@@ -696,7 +703,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "library") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[55] = input;
 			next = "castle_village";
@@ -705,7 +712,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "castle_village") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[56] = input;
 			next = "shop_village";
@@ -722,7 +729,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "shop_village") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[57] = input;
 			next = "castle_village";
@@ -731,7 +738,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "history_village") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[58] = input;
 			next = "castle_village";
@@ -740,7 +747,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "castle_entrance") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[59] = input;
 			next = "castle_fight1";
@@ -749,7 +756,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "castle_fight1") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[60] = input;
 			next = "gutenberg";
@@ -758,7 +765,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "gutenberg") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[61] = input;
 			next = "castle_fight2";
@@ -767,7 +774,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "castle_fight2") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[62] = input;
 			next = "victory";
@@ -776,7 +783,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "victory") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[63] = input;
 			next = "decision";
@@ -785,7 +792,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "decision") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[63] = input;
 			next = "scepter";
@@ -798,7 +805,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "scepter") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[64] = input;
 			next = "end";
@@ -807,7 +814,7 @@ function switchBoard(input, current, progress) {
 	else if (current === "end") {
 		//at slabtown
 		
-		//get hung
+		 
 		if (input === 1) {
 			progressArray[65] = input;
 			next = "credits";
@@ -815,10 +822,10 @@ function switchBoard(input, current, progress) {
 	}
 	$( "#wrapper" ).load( next + ".html" );
 	$('.progress').html(progressArray);
-	Cookies.set('progress', progressArray, { expires: 15, path: '/'});
-	Cookies.set('current', next, { expires: 15, path: '/'});
-	$('.current').html(next);
-	cStatus.health = parseInt(cStatus.health,10) - 10,
+	$('.current').html(saveCurrent);
+	cStatus.health = parseInt(cStatus.health,10) - 10;
 	$('.health').html(cStatus.health);
 	updateHealthBar();
+	Cookies.set('progress', progressArray, { expires: 15, path: '/'});
+	Cookies.set('current', next, { expires: 15, path: '/'});
 }

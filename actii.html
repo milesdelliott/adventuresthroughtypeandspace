@@ -18,6 +18,15 @@
 </div>
 <script>
   $( ".1" ).on( "click", function(evt) {
+  	saveStatus = cStatus;
+  	saveProgress = progressArray;
+  	saveCurrent = "actii";
+  	if (cStatus.health + 100 < cStatus.maxHealth) {
+  		cStatus.health = parseInt(cStatus.health,10) + 100;
+  	} else {
+  		cStatus.health = cStatus.maxHealth;
+  	}
+  	updateHealthBar();
   	switchBoard(1, "actii", progressArray);
   });
   $( ".2" ).on( "click", function(evt) {
@@ -29,5 +38,5 @@
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	$( '.progress' ).html(progressArray);
-  });           
+  });     
 </script>

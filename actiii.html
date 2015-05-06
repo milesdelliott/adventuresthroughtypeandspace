@@ -18,6 +18,7 @@
 </div>
 <script>
   $( ".1" ).on( "click", function(evt) {
+  	saveCurrent = "actiii";
   	switchBoard(1, "actiii", progressArray);
   });
   $( ".2" ).on( "click", function(evt) {
@@ -29,5 +30,5 @@
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	$( '.progress' ).html(progressArray);
-  });           
+  });     
 </script>

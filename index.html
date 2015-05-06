@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/site-dist.js"></script>
     <script src="js/js-cookie.js"></script>
     <script src="js/switchboard-dist.js"></script>
@@ -19,13 +20,14 @@
     <h1 id="logo">Adventures through Type and Space</h1>
     <h2 id="reset">Reset</h2>
     <script>
+      var saveCurrent;
       var charName = "Dan";
       var progressArray = new Array();
       $( "#logo" ).click(function() {
       	$( "#wrapper" ).load( "hospital.html" );
       });
       var cStatus = {
-      	health: 200,
+      	health: 300,
       	attack: 100,
       	maxHealth: 300,
       	defense: 300,
@@ -36,7 +38,11 @@
       	weapon: "club",
       	other: "hat"
       };
-      
+      var saveStatus = cStatus;
+      var saveProgress = progressArray;
+      $(function() {
+      	$( "#menu" ).tabs();
+      });
       /* if (Cookies.get('current')){
       	var progressArray = Cookies.get('progress');
       } else {
@@ -63,13 +69,26 @@
     </div>
     <div id="menuWrapper">
       <div id="menu" class="hidden modal"><span>Menu</span><span class="x">X</span>
-        <h2 class="characterName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/DingbatDan.png" alt="Dingbat Dan" class="character">
-        <p class="status"><span class="health">200</span><span class="exp">Exp: 300/500</span></p>
-        <p class="items">Items:<span class="item">,</span><span class="item">$</span><span class="item">*</span><span class="item">H</span></p>
-        <p class="progress"></p>
-        <p class="cookie"></p>
-        <p class="current">current</p>
-        <p class="lc"></p>
+        <ul class="menuTabs">
+          <li> <a href="#c">Character</a></li>
+          <li> <a href="#foodMenu">Food</a></li>
+          <li><a href="#weaponMenu">Weapons</a></li>
+        </ul>
+        <div id="c">
+          <h2 class="characterName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/DingbatDan.png" alt="Dingbat Dan" class="character">
+          <p class="status"><span class="health">200</span><span class="exp">Exp: 300/500</span></p>
+          <p class="items">Items:<span class="item">,</span><span class="item">$</span><span class="item">*</span><span class="item">H</span></p>
+          <p class="progress"></p>
+          <p class="cookie"></p>
+          <p class="current">current</p>
+          <p class="lc"></p>
+        </div>
+        <div id="foodMenu">
+          <h2 class="menuName">Food</h2>
+        </div>
+        <div id="weaponMenu">
+          <h2 class="menuName">Weapons	</h2>
+        </div>
       </div>
       <script>
         $( ".x" ).click(function() {

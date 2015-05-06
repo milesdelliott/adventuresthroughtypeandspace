@@ -758,6 +758,13 @@ img.cursor {
   text-align: right;
   float: right;
 }
+.menuTabs {
+  display: inline;
+  list-style-type: none;
+}
+.menuTabs li {
+  display: inline;
+}
 .character {
   float: right;
   height: 200px;

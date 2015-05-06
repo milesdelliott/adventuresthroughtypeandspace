@@ -45,6 +45,14 @@ function updateHealthBar() {
 	$(".healthValue").css("width", newVal+"px");
 };
 
+function deathHandler() {
+	cStatus = saveStatus;
+	progressArray = saveProgress;
+	current = saveCurrent;
+	Cookies.set('progress', progressArray, { expires: 15, path: '/'});
+	Cookies.set('current', next, { expires: 15, path: '/'});
+};
+
 var weapons = {
 	club: {
 			name:"club",
