@@ -15,7 +15,7 @@ function fightHandler(input, status, enemy) {
 	if (input === 2) {
 		var dmg = items.special
 		var received = enemy.damage * status.def;
-		status.health = status.health - received;	
+		status.health = status.health - received;
 	}
 	//enemy response
 }
@@ -40,10 +40,15 @@ function convBoard(input, current, progress, convP, convo) {
 
 };
 
+function updateHealthBar() {
+	var newVal = cStatus.health/cStatus.maxHealth*50;
+	$(".healthValue").css("width", newVal+"px");
+};
+
 var weapons = {
 	club: {
-      	name:"club",
-      	text:100,
+			name:"club",
+			text:100,
 	  	icon:"club",
 		damage:20,
 	  	effect:"health",
@@ -54,9 +59,9 @@ var weapons = {
 };
 
 var enemies = {
-   frutiger: {
-      	name:"frutiger",
-      	health:100,
+	frutiger: {
+			name:"frutiger",
+			health:100,
 	  	defense:20,
 	  	food:2,
 		attack:30,
@@ -66,5 +71,7 @@ var enemies = {
 		yeildLevel:20,
 		poisonFactor:1,
 		maxHealth:100,
-   },
+	},
 };
+
+

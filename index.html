@@ -22,15 +22,28 @@
       var charName = "Dan";
       var progressArray = new Array();
       $( "#logo" ).click(function() {
-      	$( "#wrapper" ).load( "hospital.html" );  
+      	$( "#wrapper" ).load( "hospital.html" );
       });
+      var cStatus = {
+      	health: 200,
+      	attack: 100,
+      	maxHealth: 300,
+      	defense: 300,
+      	speed: 20,
+      	special: 20,
+      	exp: "health",
+      	clothing: 30,
+      	weapon: "club",
+      	other: "hat"
+      };
+      
       /* if (Cookies.get('current')){
       	var progressArray = Cookies.get('progress');
       } else {
       	var progressArray[0] = ["1"];
       	Cookies.set('progress', progressArray.join(""), { expires: 15 });
-      }; */x
-      
+      }; */
+      		
     </script>
     <div id="wrapper">
       <script>
@@ -43,10 +56,15 @@
         };
       </script>
     </div>
+    <div id="stats">
+      <div id="health">
+        <div class="healthValue"></div>
+      </div>
+    </div>
     <div id="menuWrapper">
       <div id="menu" class="hidden modal"><span>Menu</span><span class="x">X</span>
         <h2 class="characterName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/DingbatDan.png" alt="Dingbat Dan" class="character">
-        <p class="status"><span class="health">Health: 34/50</span><span class="exp">Exp: 300/500</span></p>
+        <p class="status"><span class="health">200</span><span class="exp">Exp: 300/500</span></p>
         <p class="items">Items:<span class="item">,</span><span class="item">$</span><span class="item">*</span><span class="item">H</span></p>
         <p class="progress"></p>
         <p class="cookie"></p>

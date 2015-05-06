@@ -284,10 +284,10 @@ h6 {
   width: 100%;
   position: relative;
 }
-td.wide_button {
+.control tr td.wide_button {
   width: 100%;
 }
-td {
+.control tr td {
   padding: 5px;
   border: solid 3px #fff;
   text-transform: uppercase;
@@ -301,14 +301,14 @@ td {
   position: absolute;
   text-align: center;
 }
-td:nth-child(even) {
+.control tr td:nth-child(even) {
   right: 0;
 }
-.start_button {
+#start_button {
   width: 100%;
   height: 100px;
   font-size: 2em;
-  margin: 100px auto;
+  margin: -300px auto;
   padding: 30px;
 }
 .controlWrapper p {
@@ -317,15 +317,12 @@ td:nth-child(even) {
   font-size: 1em;
   margin: 10px 10px 20px 10px;
 }
+.cursorQ {
+  margin-top: 463px;
+}
 .background {
   color: #fff;
-}
-height 463px,
-.foreground {
   height: 463px;
-  margin-top: -463px;
-  position: absolute;
-  overflow: auto;
 }
 .layer1 {
   color: #fff;
@@ -688,9 +685,6 @@ img.cursor {
   margin-top: 60px;
   margin-left: 165px;
 }
-.cursorQ {
-  margin-top: 473px;
-}
 @-webkit-keyframes upanddown {
   0% {
     margin-top: -1100px;
@@ -728,7 +722,7 @@ img.cursor {
   width: 500px;
   height: 300px;
   background: #333;
-  margin: -550px auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 20px;
   color: #fff;
   border: solid 5px #000;
@@ -736,6 +730,25 @@ img.cursor {
   -webkit-box-shadow: 10px 10px rgba(0,0,0,0.4);
   -webkit-box-shadow: 10px 10px rgba(0,0,0,0.4);
   box-shadow: 10px 10px rgba(0,0,0,0.4);
+}
+#stats {
+  position: relative;
+  width: 768px;
+  height: 100px;
+  margin: -718px auto 0 auto;
+  padding: 20px;
+}
+#stats #health {
+  position: relative;
+  border: solid 3px #000;
+  height: 10px;
+  width: 54px;
+}
+#stats #health .healthValue {
+  position: relative;
+  background: #e00;
+  width: 50px;
+  height: 6px;
 }
 .hidden {
   display: none;
@@ -782,7 +795,7 @@ img.cursor {
   text-align: left;
   width: 600px;
   height: 400px;
-  margin: 0 auto 0 auto;
+  margin: -463px auto 0 auto;
   padding-top: 100px;
 }
 .foreground .quote .quotename {

@@ -13,12 +13,12 @@
   <p class="text"> </p>
   <table class="control">
     <tr>
-      <td class="start_button">Start</td>
+      <td id="start_button">Start</td>
     </tr>
   </table>
 </div>
 <script>
-  $( ".start_button" ).on( "click", function(evt) {
+  $( "#start_button" ).on( "click", function(evt) {
   	switchBoard(1, "intro", progressArray);
   });         
 </script>
