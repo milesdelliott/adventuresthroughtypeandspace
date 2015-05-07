@@ -857,13 +857,13 @@ img.cursor {
 }
 #stats #health {
   position: relative;
-  border: solid 3px #000;
+  border: solid 3px transparent;
   height: 10px;
   width: 54px;
 }
 #stats #health .healthValue {
   position: relative;
-  background: #e00;
+  background: transparent;
   width: 50px;
   height: 100%;
 }

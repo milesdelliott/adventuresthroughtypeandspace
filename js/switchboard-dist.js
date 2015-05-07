@@ -581,6 +581,14 @@ function switchBoard(input, current, progress) {
 			progressArray[37] = input;
 			next = "bodoni";
 		}
+		if (input === 2) {
+			progressArray[37] = input;
+			next = "bodoni";
+		}
+		if (input === 3) {
+			progressArray[37] = input;
+			next = "death";
+		}
 	}
 	else if (current === "moon_up") {
 		//at slabtown
@@ -912,7 +920,7 @@ function switchBoard(input, current, progress) {
 		}
 	}
 	$( "#wrapper" ).load( next + ".html" );
-	cStatus.health = parseInt(cStatus.health,10) - 10;
+	//cStatus.health = parseInt(cStatus.health,10) - 10;
 	$('.health').html(cStatus.health);
 	$('.healthMax').html(cStatus.maxHealth);
 	updateHealthBar();
