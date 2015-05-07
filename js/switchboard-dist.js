@@ -11,7 +11,7 @@ function preloadimages(arr){
 
 preloadimages(['backgrounds/cursor.png', 'backgrounds/hirez.png', 'backgrounds/swamp.png', 'backgrounds/swamp2.png', 'backgrounds/crossroads.png', 'backgrounds/city.png', 'backgrounds/shop.png', 'backgrounds/gift.png', 'backgrounds/bodoni.png', 'backgrounds/fashionshow.png', 'backgrounds/slabtown.png', 'backgrounds/moon.png', 'backgrounds/slabtownnoose.png', 'foregrounds/spaceship.png', 'foregrounds/frutiger1-01.png', 'foregrounds/frutiger2-01.png', 'foregrounds/frutiger3-01.png'])
 function switchBoard(input, current, progress) {
-	var next = "intro";
+	var next = "death";
 	
 	if (cStatus.health <= 0) {
 			next = "death";
@@ -407,7 +407,7 @@ function switchBoard(input, current, progress) {
 		//go to slabtown
 		if (input === 1) {
 			progressArray[27] = input;
-			next = "bank";
+			next = "bank_outer";
 		}
 		if (input === 2) {
 			progressArray[27] = input;
@@ -444,7 +444,7 @@ function switchBoard(input, current, progress) {
 			next = "swiss";
 		}
 	}
-	else if (current === "bank") {
+	else if (current === "bank_outer") {
 		//at slabtown
 		
 		 

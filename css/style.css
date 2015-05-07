@@ -412,6 +412,17 @@ img.cursor {
   margin-top: 160px;
   margin-left: 400px;
 }
+.city .cursor {
+  margin-top: 270px;
+  margin-left: 280px;
+  width: 91px;
+  position: absolute;
+  -webkit-animation: bounce2 2s infinite;
+  -moz-animation: bounce2 2s infinite;
+  -o-animation: bounce2 2s infinite;
+  -ms-animation: bounce2 2s infinite;
+  animation: bounce2 2s infinite;
+}
 .byecursor .cursor {
   margin-top: 170px;
   width: 91px;
@@ -608,9 +619,9 @@ img.cursor {
   position: absolute;
 }
 .gill {
-  width: 250px;
+  height: 400px;
   position: absolute;
-  margin-top: 172px;
+  margin-top: 550px;
   margin-left: 100px;
 }
 .flying_machine {
@@ -827,7 +838,7 @@ img.cursor {
   margin-left: 200px;
 }
 .char_scepter {
-  margin-top: 30px;
+  margin-top: -30px;
   width: 220px;
   margin-left: 295px;
 }
@@ -1014,6 +1025,50 @@ img.cursor {
   }
   100% {
     margin-top: 170px;
+  }
+}
+@-moz-keyframes bounce2 {
+  0% {
+    margin-top: 700px;
+  }
+  50% {
+    margin-top: 690px;
+  }
+  100% {
+    margin-top: 700px;
+  }
+}
+@-webkit-keyframes bounce2 {
+  0% {
+    margin-top: 700px;
+  }
+  50% {
+    margin-top: 690px;
+  }
+  100% {
+    margin-top: 700px;
+  }
+}
+@-o-keyframes bounce2 {
+  0% {
+    margin-top: 700px;
+  }
+  50% {
+    margin-top: 690px;
+  }
+  100% {
+    margin-top: 700px;
+  }
+}
+@keyframes bounce2 {
+  0% {
+    margin-top: 700px;
+  }
+  50% {
+    margin-top: 690px;
+  }
+  100% {
+    margin-top: 700px;
   }
 }
 @-moz-keyframes build {

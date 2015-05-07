@@ -1,34 +1,86 @@
 
-<div class="city screenview">
-  <div class="background"><img src="backgrounds/history.png" alt="History of City"/></div>
-  <div class="foreground">
+<div class="history screenview">
+  <script>
+    var convOcrb = [
+    		[
+    			'<span class="quote">"Hello, nice to meet you, I am Zuzana Licko. I am one of the first typographers to utilize pixels to create type, and I revolutionized the industry. Is there anything you would like to know about OCR-B?"</span>',
+    			'"Year created"',
+    			'"Purpose"',
+    			'"Typographer"',
+    			2,
+    			2,
+    			2,
+    			0
+    		],
+    		[
+    			'<span class="quote">"Hello, nice to meet you, I am Zuzana Licko. I am one of the first typographers to utilize pixels to create type, and I revolutionized the industry. Is there anything you would like to know about OCRB?"</span>',
+    			'"Year created"',
+    			'"Purpose"',
+    			'"Typographer"',
+    			2,
+    			2,
+    			2,
+    			0
+    		],
+    		[
+    			'<span class="quote">"OCR-B was created in 1968 for Monotype by Adrian Frutiger. It was the first typeface to be legible to computers and was accepted as world standard in 1973; you\'ve probably seen it used for flight boarding passes and other tickets"</span>',
+    			'"Cool!"',
+    			'"I had no idea"',
+    			'"Eh"',
+    			3,
+    			3,
+    			3,
+    			0
+    		],
+    		[
+    			'<span class="quote">"Thank you for your time, best of luck on your quest"</span>',
+    			'Back to the city center',
+    			'"Have a good day!"',
+    		  '"Bye"',
+    		  4,
+    		  5,
+    		  0,
+    		  1
+    		],
+    		
+    	];	
+  </script>
+  <div class="background"><img src="backgrounds/history.png" alt="history"/></div>
+  <div class="foreground"></div>
+  <div class="controlWrapper">
+    <p class="text"><span class="quote">"Hello, nice to meet you, I am Zuzana Licko. I am one of the first typographers to utilize pixels to create type, and I revolutionized the industry. Is there anything you would like to know about OCR-B?"</span></p>
+    <table class="control">
+      <tr>
+        <td class="1">What</td>
+        <td class="4">Menu</td>
+      </tr>
+      <tr> 
+        <td class="2">What</td>
+        <td class="3">What</td>
+      </tr>
+    </table>
   </div>
+  <script>
+    var convoCurrent = 0;
+    var convo = "convOcrb";
+    
+    $('.text').html(convOcrb[0][0]);
+    $('.1').html(convOcrb[0][1]);
+    $('.2').html(convOcrb[0][2]);
+    $('.3').html(convOcrb[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "history", progressArray, convoCurrent, convOcrb);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "history", progressArray, convoCurrent, convOcrb);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "history", progressArray, convoCurrent, convOcrb);
+    });   
+    $( ".4" ).on( "click", function(evt) {
+    	menuGen();
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    }); 
+  </script>
 </div>
-<div class="controlWrapper">
-  <p class="text"><span class="quote">"Hi, I am Zuzana Licko, pioneer in the field of digital typography"</span></p>
-  <table class="control">
-    <tr class="row1">
-      <td class="1">Tell me about Pixel Fonts</td>
-      <td class="4">Menu</td>
-    </tr>
-    <tr class="row2">
-      <td class="2">What typfeaces have you made?</td>
-    </tr>
-  </table>
-</div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "history", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "history", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "history", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>
