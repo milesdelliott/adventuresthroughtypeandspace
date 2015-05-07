@@ -597,6 +597,41 @@ img.cursor {
   position: absolute;
   margin-left: 30px;
 }
+.halfdan {
+  width: 94px;
+  position: absolute;
+  margin-left: 220px;
+  margin-top: 450px;
+}
+.wild .dan_back_big {
+  margin-top: 130px;
+  width: 90px;
+  margin-left: 500px;
+}
+.port .spaceship {
+  position: absolute;
+  width: 100px;
+  margin-top: 495px;
+  margin-left: 280px;
+}
+.port-go .spaceship {
+  position: absolute;
+  width: 100px;
+  margin-top: -600px;
+  margin-left: 280px;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: blastoff;
+  -moz-animation-name: blastoff;
+  -o-animation-name: blastoff;
+  -ms-animation-name: blastoff;
+  animation-name: blastoff;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: blastoff;
+}
 .didot {
   width: 250px;
   position: absolute;
@@ -625,7 +660,7 @@ img.cursor {
   height: 293px;
   position: absolute;
   margin-left: 90px;
-  margin-top: -310px;
+  margin-top: 157px;
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
   -o-animation-duration: 3s;
@@ -661,7 +696,7 @@ img.cursor {
   height: 293px;
   position: absolute;
   margin-left: 70px;
-  margin-top: 150px;
+  margin-top: 157px;
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
   -o-animation-duration: 3s;
@@ -711,11 +746,25 @@ img.cursor {
 }
 @-webkit-keyframes blastoff {
   from {
-    margin-top: -310px;
+    margin-top: 40px;
+    visibility: visible;
   }
   to {
-    margin-top: -1100px;
+    margin-top: -600px;
+    visibility: visible;
   }
+}
+.dan_halfback_big {
+  position: absolute;
+  height: 180px;
+  margin-top: 280px;
+  margin-left: 300px;
+}
+.dan_quarterback_big {
+  position: absolute;
+  height: 380px;
+  margin-top: 80px;
+  margin-left: 330px;
 }
 .char_scepter {
   margin-top: 30px;
@@ -1509,34 +1558,34 @@ img.cursor {
 }
 @-moz-keyframes touchdown {
   from {
-    margin-top: -1100px;
+    margin-top: -800px;
   }
   to {
-    margin-top: -310px;
+    margin-top: 157px;
   }
 }
 @-webkit-keyframes touchdown {
   from {
-    margin-top: -1100px;
+    margin-top: -800px;
   }
   to {
-    margin-top: -310px;
+    margin-top: 157px;
   }
 }
 @-o-keyframes touchdown {
   from {
-    margin-top: -1100px;
+    margin-top: -800px;
   }
   to {
-    margin-top: -310px;
+    margin-top: 157px;
   }
 }
 @keyframes touchdown {
   from {
-    margin-top: -1100px;
+    margin-top: -800px;
   }
   to {
-    margin-top: -310px;
+    margin-top: 157px;
   }
 }
 @-moz-keyframes upanddown {
@@ -1605,33 +1654,37 @@ img.cursor {
 }
 @-moz-keyframes blastoff {
   from {
-    margin-top: -310px;
+    margin-top: 40px;
+    visibility: visible;
   }
   to {
-    margin-top: -1100px;
+    margin-top: -600px;
   }
 }
 @-webkit-keyframes blastoff {
   from {
-    margin-top: -310px;
+    margin-top: 40px;
+    visibility: visible;
   }
   to {
-    margin-top: -1100px;
+    margin-top: -600px;
   }
 }
 @-o-keyframes blastoff {
   from {
-    margin-top: -310px;
+    margin-top: 40px;
+    visibility: visible;
   }
   to {
-    margin-top: -1100px;
+    margin-top: -600px;
   }
 }
 @keyframes blastoff {
   from {
-    margin-top: -310px;
+    margin-top: 40px;
+    visibility: visible;
   }
   to {
-    margin-top: -1100px;
+    margin-top: -600px;
   }
 }

@@ -1,17 +1,18 @@
 
 <div class="slabtown screenview">
-  <div class="background"><img src="backgrounds/history_slabtown.png" alt="History of Slabtown"/></div>
+  <div class="background"><img src="backgrounds/saloon.png" alt="History of Slabtown"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
   <p class="text">Slab serifs were commonly used with wood type</p>
   <table class="control">
-    <tr>
+    <tr class="row1">
       <td class="1">Cool</td>
       <td class="4">Menu</td>
     </tr>
-    <tr>
+    <tr class="row2">
       <td class="2">Nice</td>
       <td class="3">Bye</td>
     </tr>
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>

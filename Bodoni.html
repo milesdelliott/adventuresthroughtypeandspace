@@ -8,11 +8,11 @@
 <div class="controlWrapper">
   <p class="text">You are at the town of Bodoni</p>
   <table class="control">
-    <tr>
+    <tr class="row1">
       <td class="1">Go to the Fashion Show</td>
       <td class="4">Menu</td>
     </tr>
-    <tr>
+    <tr class="row2">
       <td class="2">Go to Fashion School</td>
     </tr>
   </table>
@@ -32,4 +32,11 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (progressArray[75]) {
+  	$(".spaceship").remove();
+  } else if (progressArray[39]) {
+  	$(".spaceship").remove();
+  }
 </script>

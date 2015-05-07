@@ -489,15 +489,26 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[34] = input;
-			next = "moon";
+			next = "port_futura_go";
 		}
 		if (input === 2) {
 			progressArray[34] = input;
-			next = "moon";
+			next = "port_futura_go";
 		}
 		if (input === 3) {
 			progressArray[34] = input;
 			next = "mountain";
+		}
+	}
+		else if (current === "port_futura_go") {
+		//at slabtown
+		
+		 
+		if (input === 1) {
+			next = "moon";
+		}
+		if (input === 2) {
+			next = "moon";
 		}
 	}
 	else if (current === "port_eurostile") {
@@ -506,15 +517,26 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[35] = input;
-			next = "voyage_eurostile";
+			next = "port_eurostile_go";
 		}
 		if (input === 2) {
 			progressArray[35] = input;
-			next = "voyage_eurostile";
+			next = "port_eurostile_go";
 		}
 		 if (input === 3) {
 			progressArray[35] = input;
 			next = "mountain";
+		}
+	}
+		else if (current === "port_eurostile_go") {
+		//at slabtown
+		
+		 
+		if (input === 1) {
+			next = "voyage_eurostile";
+		}
+		if (input === 2) {
+			next = "voyage_eurostile";
 		}
 	}
 	else if (current === "moon") {
@@ -553,7 +575,7 @@ function switchBoard(input, current, progress) {
 			next = "fashionshow";
 		}
 		 if (input === 2) {
-			progressArray[39] = input;
+			progressArray[75] = input;
 			next = "fashion_school";
 		}
 	}
@@ -562,7 +584,7 @@ function switchBoard(input, current, progress) {
 		
 		 
 		if (input === 1) {
-			progressArray[39] = input;
+			progressArray[73] = input;
 			next = "bodoni";
 		}
 	}
@@ -571,8 +593,12 @@ function switchBoard(input, current, progress) {
 		
 		 
 		if (input === 1) {
-			progressArray[39] = input;
+			progressArray[74] = input;
 			next = "prize";
+		}
+		if (input === 2) {
+			progressArray[74] = input;
+			next = "bodoni";
 		}
 	}
 	else if (current === "prize") {
@@ -615,6 +641,14 @@ function switchBoard(input, current, progress) {
 		
 		 
 		if (input === 1) {
+			progressArray[43] = input;
+			next = "slabtown";
+		}
+		if (input === 2) {
+			progressArray[43] = input;
+			next = "slabtown";
+		}
+		if (input === 3) {
 			progressArray[43] = input;
 			next = "slabtown";
 		}

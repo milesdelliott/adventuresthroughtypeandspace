@@ -1,0 +1,35 @@
+
+<div class="port-go screenview">
+  <div class="background"><img src="backgrounds/port_futura.png" alt="Port Futura"/></div>
+  <div class="foreground">
+    <div class="layer"><img src="foregrounds/spaceship.png" alt="spaceship" class="spaceship"/></div>
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"All systems go! Goodbye Earth"</span></p>
+  <table class="control">
+    <tr class="row1">
+      <td class="1">&quot;Goodbye Earth&quot;</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr class="row2">
+      <td class="2">&quot;I love space!&quot;</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "port_futura_go", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "port_futura_go", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "port_futura_go", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	menuGen();
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

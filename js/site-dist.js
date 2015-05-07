@@ -63,7 +63,7 @@ function menuGen() {
 
 function addFood(name) {
 	food[name].has = true;
-	$('#foodMenu').append($('<img src="icons/'+name+'.png" alt="'+name+'" class="itemFood '+name+'" //>'));
+	$('#foodMenu').append($('<img src="icons/'+name+'.png" alt="'+name+'" class="itemFood '+name+'" />'));
 };
 
 function eatFood(name) {

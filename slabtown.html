@@ -2,16 +2,17 @@
 <div class="slabtown screenview">
   <div class="background"><img src="backgrounds/slabtown.png" alt="The Slabtown"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_halfback_big.png" alt="dan_halfback_big" class="dan_halfback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
   <p class="text">You are in the Jurisdiction of the Slab Sheriff</p>
   <table class="control">
-    <tr>
+    <tr class="row1">
       <td class="1">Saloon</td>
       <td class="4">Menu</td>
     </tr>
-    <tr>
+    <tr class="row2">
       <td class="2">Shop</td>
       <td class="3">Visit the Sheriff</td>
     </tr>
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_halfback_big").attr('src', 'foregrounds/wendy_halfback_big.png');
+  }
 </script>
