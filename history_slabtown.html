@@ -1,39 +1,83 @@
 
 <div class="slabtown screenview">
-  <div class="background"><img src="backgrounds/saloon.png" alt="History of Slabtown"/></div>
+  <script>
+    var convSaloon = [
+    		[
+    			'<span class="quote">"Howdy! What can I do for you today?"</span>',
+    			'Where am I?',
+    			'Who is the Sheriff?',
+    			'What is this place?',
+    			2,
+    			2,
+    			2,
+    			0
+    		],
+    		[
+    			'<span class="quote">"Howdy! What can I do for you today?"</span>',
+    			'Where am I?',
+    			'Who is the Sheriff?',
+    			'What is this place?',
+    			2,
+    			2,
+    			2,
+    			0
+    		],
+    		[
+    			'<span class="quote">"This is Clarendon. Robert Besley designed it back in 1845."</span>',
+    			'"I see"',
+    			'"Cool"',
+    			'"Thanks for your help"',
+    			3,
+    			3,
+    			3,
+    			1
+    		],
+    	];
+  </script>
+  <div class="background"><img src="backgrounds/saloon.png" alt="history_slabtown" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">Slab serifs were commonly used with wood type</p>
+  <p class="text"><span class="quote">"Howdy! What can I do for you today?"</span></p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Cool</td>
+    <tr>
+      <td class="1">what</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
-      <td class="2">Nice</td>
-      <td class="3">Bye</td>
+    <tr>
+      <td class="2">what</td>
+      <td class="3">what?</td>
     </tr>
   </table>
+  <script>
+    var current = "history_slabtown";
+    var convoCurrent = 0;
+    var convo = "convSaloon";
+    
+    $('.text').html(convSaloon[0][0]);
+    $('.1').html(convSaloon[0][1]);
+    $('.2').html(convSaloon[0][2]);
+    $('.3').html(convSaloon[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "history_slabtown", progressArray, convoCurrent, convSaloon);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "history_slabtown", progressArray, convoCurrent, convSaloon);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "history_slabtown", progressArray, convoCurrent, convSaloon);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+    
+    
+    
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "history_slabtown", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "history_slabtown", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "history_slabtown", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>
 <script>
   if (charName === "Wendy") {
   	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');

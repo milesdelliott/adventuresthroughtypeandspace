@@ -1,39 +1,72 @@
 
 <div class="slabtown screenview">
-  <div class="background"><img src="backgrounds/horsechase.png" alt="Escape from Slabtown"/></div>
+  <script>
+    var convHorsee = [
+    		[
+    			'The pirate realizes he has been found out and steals the nearest horse, you quickly get a horse of your own and give chase.',
+    			'Faster',
+    			'Faster',
+    		  	'Faster',
+    		  	1,
+    		  	1,
+    		  	1,
+    		  	0
+    		],
+    		[
+    			'You are fast, but the pirate is faster, he slowly disappears into the distance, but there is only one place he can be headed',
+    			'After him',
+    			'"Damn!"',
+    			'Take the road towards the forest',
+    			4,
+    		 	5,
+    			0,
+    			1
+    		],
+    
+    ];
+  </script>
+  <div class="background"><img src="backgrounds/horsechase.png" alt="horsechase" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_chase.png" alt="dan_chase" class="dan_chase"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">Catch that Bandit!</p>
+  <p class="text"><span class="quote">"Hello, I am Robert Besley, Sherriff of this town. I am the creator of the first registered typeface. Welcome to my town."</span></p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Faster</td>
+    <tr>
+      <td class="1">what</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
-      <td class="2">Faster</td>
-      <td class="3">Slower</td>
+    <tr>
+      <td class="2">what</td>
+      <td class="3">what</td>
     </tr>
   </table>
+  <script>
+    var current = "escape_slabtown";
+    var convoCurrent = 0;
+    var convo = "convHorsee";
+    
+    $('.text').html(convHorsee[0][0]);
+    $('.1').html(convHorsee[0][1]);
+    $('.2').html(convHorsee[0][2]);
+    $('.3').html(convHorsee[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "escape_slabtown", progressArray, convoCurrent, convHorsee);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "escape_slabtown", progressArray, convoCurrent, convHorsee);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "escape_slabtown", progressArray, convoCurrent, convHorsee);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+    
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "escape_slabtown", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "escape_slabtown", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "escape_slabtown", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>
 <script>
   if (charName === "Wendy") {
   	$(".dan_chase").attr('src', 'foregrounds/wendy_chase.png');

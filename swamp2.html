@@ -1,33 +1,87 @@
 
 <div class="swamp screenview">
-  <div class="background"><img src="backgrounds/swamp2.png" alt="Swamp of Shitty Fonts"/></div>
+  <script>
+    var fontSwamp = [
+    			[
+    				'<span class="quote">"Pick one up, but use care: it could be contaminated!"</span>',
+    				'Pick it up',
+    				'Yuck',
+    				'Ew',
+    				2,
+    				2,
+    				2,
+    				0
+    			],
+    			[
+    				'<span class="quote">"Pick one up, but use care: it could be contaminated!"</span>',
+    				'Pick it up',
+    				'Yuck',
+    				'Ew',
+    				2,
+    				2,
+    				2,
+    				0
+    			],
+    			[
+    				'<span class="quote">"See, not all typefaces are created equally. Well-made type can benefit your health and give you extra skills; poorly constructed type like this one has all sorts of structural issues when it comes to spacing and legibility. Kind of reminds me of the typeface you tried to construct."</span>',
+    				'"Hey!"',
+    				'"Rude"',
+    				'"You\'re right"',
+    				3,
+    				3,
+    				3,
+    				0
+    			],
+    			[
+    				'<span class="quote">"No matter. Take this letterform, it may come in handy later."</span>',
+    				'Got it',
+    				'Thanks Cursor ',
+    			  'You have a point',
+    			  4,
+    			  5,
+    			  0,
+    			  1
+    			],
+    		];
+  </script>
+  <div class="background"><img src="backgrounds/swamp2.png" alt="swamp" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_back_big.png" alt="dan_back_big" class="dan_back_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text"><span class="quote">"Be careful, they can be contagious"</span></p>
+  <p class="text">&lt;span class=&quot;quote&quot;&gt;&quot;Pick one up, but use care: it could be contaminated!&quot;&lt;/span&gt;</p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Continue on your Journey</td>
+    <tr>
+      <td class="1">What</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
+    <tr>
+      <td class="2">What</td>
+      <td class="3">What</td>
     </tr>
   </table>
+  <script>
+    var current = "swamp2";
+    var convoCurrent = 0;
+    var convo= "fontSwamp";
+    
+    $('.text').html(fontSwamp[0][0]);
+    $('.1').html(fontSwamp[0][1]);
+    $('.2').html(fontSwamp[0][2]);
+    $('.3').html(fontSwamp[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "swamp2", progressArray, convoCurrent, fontSwamp);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "swamp2", progressArray, convoCurrent, fontSwamp);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "swamp2", progressArray, convoCurrent, fontSwamp);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "swamp2", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "swamp2", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "swamp2", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>

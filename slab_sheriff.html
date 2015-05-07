@@ -1,35 +1,68 @@
 
 <div class="slabtown screenview">
-  <div class="background"><img src="backgrounds/slab_sheriff.png" alt="Sheriff of Slabtown"/></div>
+  <script>
+    var convsheriff = [
+    		[
+    			'<span class="quote">"Hello, I am Robert Besley, Sherriff of this town. I am the creator of the first registered typeface. Welcome to my town."</span>',
+    			'Nice to meet you',
+    			'You seem cool',
+    		  	'I like your hat',
+    		  	1,
+    		  	1,
+    		  	1,
+    		  	0
+    		],
+    		[
+    			'<span class="quote">"I\'m about to go see a hanging, we caught the bandit that has been causing a ruckus. want to come and see?."</span>',
+    			'Sure',
+    			'Yeah',
+    			'Sounds alright',
+    			4,
+    		 	5,
+    			0,
+    			1
+    		],
+    
+    ];
+  </script>
+  <div class="background"><img src="backgrounds/slab_sheriff.png" alt="slab_sheriff" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text"><span class="quote">"Welcome to Slabtown, you are just in time to see the hanging."</span></p>
+  <p class="text"><span class="quote">"Hello, I am Robert Besley, Sherriff of this town. I am the creator of the first registered typeface. Welcome to my town."</span></p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Hanging?</td>
+    <tr>
+      <td class="1">what</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
-      <td class="2">Excellent</td>
-      <td class="3">Who is being Hung?</td>
+    <tr>
+      <td class="2">what</td>
+      <td class="3">what</td>
     </tr>
   </table>
+  <script>
+    var current = "slab_sheriff";
+    var convoCurrent = 0;
+    var convo = "convsheriff";
+    
+    $('.text').html(convsheriff[0][0]);
+    $('.1').html(convsheriff[0][1]);
+    $('.2').html(convsheriff[0][2]);
+    $('.3').html(convsheriff[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "slab_sheriff", progressArray, convoCurrent, convsheriff);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "slab_sheriff", progressArray, convoCurrent, convsheriff);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "slab_sheriff", progressArray, convoCurrent, convsheriff);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "slab_sheriff", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "slab_sheriff", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "slab_sheriff", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>

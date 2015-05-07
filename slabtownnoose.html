@@ -1,38 +1,72 @@
 
 <div class="slabtown screenview">
-  <div class="background"><img src="backgrounds/slabtownnoose.png" alt="The Slabtown Hanging"/></div>
+  <script>
+    var convNoose = [
+    		[
+    			'Wait, that\'s not the pirate!',
+    			'"You\'re making a mistake!"',
+    			'"Stop the Hangning"',
+    		  	'"You\'ve got the wrong person!"',
+    		  	1,
+    		  	1,
+    		  	1,
+    		  	0
+    		],
+    		[
+    			'<span class="quote">What are you talking about"</span><span class="quote">Yeah! What\'s going on here?"</span>',
+    			'"The man you want is there!"',
+    			'"It\'s him!"',
+    			'"There\'s the real pirate!"',
+    			4,
+    		 	5,
+    			0,
+    			1
+    		],
+    
+    ];
+  </script>
+  <div class="background"><img src="backgrounds/slabtownnoose.png" alt="slabtownnoose" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_halfback_big.png" alt="dan_halfback_big" class="dan_halfback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">An Innocent man is about to be Hung!</p>
+  <p class="text"><span class="quote">"Hello, I am Robert Besley, Sherriff of this town. I am the creator of the first registered typeface. Welcome to my town."</span></p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Stop it!</td>
+    <tr>
+      <td class="1">what</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
-      <td class="2">Let him Hang</td>
+    <tr>
+      <td class="2">what</td>
+      <td class="3">what</td>
     </tr>
   </table>
+  <script>
+    var current = "slabtownnoose";
+    var convoCurrent = 0;
+    var convo = "convNoose";
+    
+    $('.text').html(convNoose[0][0]);
+    $('.1').html(convNoose[0][1]);
+    $('.2').html(convNoose[0][2]);
+    $('.3').html(convNoose[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "slabtownnoose", progressArray, convoCurrent, convNoose);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "slabtownnoose", progressArray, convoCurrent, convNoose);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "slabtownnoose", progressArray, convoCurrent, convNoose);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+    
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "slabtownnoose", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "slabtownnoose", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "slabtownnoose", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>
 <script>
   if (charName === "Wendy") {
   	$(".dan_halfback_big").attr('src', 'foregrounds/wendy_halfback_big.png');

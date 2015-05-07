@@ -159,12 +159,28 @@ function switchBoard(input, current, progress) {
 			progressArray[14] = input;
 			next = "swamp2";
 		}
+		if (input === 2) {
+			progressArray[14] = input;
+			next = "swamp2";
+		}
+		if (input === 3) {
+			progressArray[14] = input;
+			next = "swamp2";
+		}
 	}
 	else if (current === "swamp2") {
 		//Gross Swamp
 		
 		//crossroads
 		if (input === 1) {
+			progressArray[15] = input;
+			next = "para";
+		}
+		if (input === 2) {
+			progressArray[15] = input;
+			next = "para";
+		}
+		if (input === 3) {
 			progressArray[15] = input;
 			next = "para";
 		}
@@ -783,12 +799,20 @@ function switchBoard(input, current, progress) {
 			progressArray[54] = input;
 			next = "library";
 		}
+		if (input === 2) {
+			progressArray[54] = input;
+			next = "library";
+		}
 	}
 	else if (current === "library") {
 		//at slabtown
 		
 		 
 		if (input === 1) {
+			progressArray[55] = input;
+			next = "castle_entrance";
+		}
+		if (input === 2) {
 			progressArray[55] = input;
 			next = "castle_entrance";
 		}

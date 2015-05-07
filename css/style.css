@@ -874,6 +874,12 @@ img.cursor {
   width: 80px;
   margin-left: 200px;
 }
+img.gutenberg {
+  margin-top: 100px;
+  height: 400px;
+  position: absolute;
+  margin-left: 400px;
+}
 .char_scepter {
   margin-top: -30px;
   width: 220px;
