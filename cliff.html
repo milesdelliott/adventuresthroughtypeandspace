@@ -1,7 +1,8 @@
 
 <div class="cliff screenview">
-  <div class="background"><img src="backgrounds/cliff.png" alt="Building a Flying Machine"/></div>
+  <div class="background"><img src="backgrounds/cliff.png" alt="Building a Flying Machine" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_side_small.png" alt="dan_side_small" class="dan_side_small"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_side_small").attr('src', 'foregrounds/wendy_side_small.png');
+  }
 </script>

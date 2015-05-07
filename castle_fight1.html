@@ -2,10 +2,12 @@
 <div class="castle screenview">
   <div class="background"><img src="backgrounds/castle_fight1.png" alt="Fight!"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
+    <div class="layer"><img src="foregrounds/pirate_front_big.png" alt="pirate_front_big" class="pirate_front_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">It's the Bandit, trying to steal the presses!</p>
+  <p class="text">It's the pirate, trying to steal the presses!</p>
   <table class="control">
     <tr class="row1">
       <td class="1">Stop Him</td>
@@ -31,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>

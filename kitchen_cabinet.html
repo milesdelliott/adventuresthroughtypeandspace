@@ -1,7 +1,8 @@
 
-<div class="hirez screenview">
+<div class="cabinet screenview">
   <div class="background"><img src="backgrounds/kitchen_cabinet.png" alt="Your Kitchen"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>

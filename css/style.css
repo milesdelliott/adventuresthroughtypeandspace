@@ -369,6 +369,22 @@ h6 {
   animation-duration: 3s;
   margin-left: 100px;
 }
+.cabinet .dan_quarterback_big {
+  margin-left: 590px;
+}
+.pantry .dan_quarterback_big {
+  margin-left: 200px;
+}
+.hirez .dan_side_small {
+  margin-top: 393px;
+  margin-left: 620px;
+  height: 60px;
+}
+.hirez .cursor_small {
+  margin-top: 393px;
+  margin-left: 670px;
+  height: 60px;
+}
 .para .wendy_side_medium {
   height: 162px;
   margin-top: 270px;
@@ -382,14 +398,19 @@ img.cursor {
   animation: bounce 2s infinite;
 }
 .crossroads .dan_side_big {
-  margin-top: 130px;
-  width: 41px;
+  margin-top: 110px;
+  height: 330px;
   margin-left: 300px;
 }
 .crossroads .cursor {
   margin-top: 170px;
   width: 91px;
   margin-left: 100px;
+}
+.city .dan_quarterback_big {
+  height: 300px;
+  margin-top: 160px;
+  margin-left: 400px;
 }
 .byecursor .cursor {
   margin-top: 170px;
@@ -597,6 +618,12 @@ img.cursor {
   position: absolute;
   margin-left: 30px;
 }
+.cliff .dan_side_small {
+  height: 90px;
+  position: absolute;
+  margin-left: 410px;
+  margin-top: 95px;
+}
 .halfdan {
   width: 94px;
   position: absolute;
@@ -710,6 +737,10 @@ img.cursor {
   -webkit-animation-duration: 3s;
   -webkit-animation-name: touchdown;
 }
+.bodoni .dan_halfback_big {
+  height: 250px;
+  margin-top: 210px;
+}
 .dan_fall {
   height: 324px;
   margin-top: 60px;
@@ -765,6 +796,35 @@ img.cursor {
   height: 380px;
   margin-top: 80px;
   margin-left: 330px;
+}
+.forest .dan_quarterback_big {
+  position: absolute;
+  height: 380px;
+  margin-top: 80px;
+  margin-left: 180px;
+}
+.library .dan_quarterback_big {
+  position: absolute;
+  height: 300px;
+  margin-top: 160px;
+  margin-left: 380px;
+}
+.castle .pirate_front_big {
+  position: absolute;
+  height: 300px;
+  margin-top: 570px;
+  margin-left: 230px;
+}
+.castle .dan_quarterback_big {
+  position: absolute;
+  height: 380px;
+  margin-top: 80px;
+  margin-left: 570px;
+}
+.castle .dan_front_big {
+  margin-top: 120px;
+  width: 80px;
+  margin-left: 200px;
 }
 .char_scepter {
   margin-top: 30px;

@@ -1,0 +1,35 @@
+
+<div class="swiss screenview">
+  <div class="background"><img src="backgrounds/merchants.png" alt="Three Merchants" class="bgimg"/></div>
+  <div class="foreground">
+  </div>
+</div>
+<div class="controlWrapper">
+  <p class="text"><span class="quote">"Good, you're alive! Come with us to the great city of Helvetica!"</span><br /><span class="quote">"The greatest most internationally styled city!"</span></p>
+  <table class="control">
+    <tr class="row1">
+      <td class="1">&quot;Ok?&quot;</td>
+      <td class="4">Menu</td>
+    </tr>
+    <tr class="row2">
+      <td class="2">&quot;Sure&quot;</td>
+      <td class="3">&quot;Do I have a choice?&quot;</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $( ".1" ).on( "click", function(evt) {
+  	switchBoard(1, "merchants", progressArray);
+  });
+  $( ".2" ).on( "click", function(evt) {
+  	switchBoard(2, "merchants", progressArray);
+  });
+  $( ".3" ).on( "click", function(evt) {
+  	switchBoard(3, "merchants", progressArray);
+  });   
+  $( ".4" ).on( "click", function(evt) {
+  	$( "#menu" ).toggleClass( "hidden" )
+  	menuGen();
+  	$( '.progress' ).html(progressArray);
+  });           
+</script>

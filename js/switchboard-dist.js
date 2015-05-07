@@ -373,6 +373,23 @@ function switchBoard(input, current, progress) {
 		//go to Fashion Show
 		if (input === 1) {
 			progressArray[26] = input;
+			next = "merchants";
+		}
+		if (input === 2) {
+			progressArray[26] = input;
+			next = "merchants";
+		}
+		if (input === 3) {
+			progressArray[26] = input;
+			next = "merchants";
+		}
+	}
+		else if (current === "merchants") {
+		//Bodoni
+		
+		//go to Fashion Show
+		if (input === 1) {
+			progressArray[26] = input;
 			next = "swiss";
 		}
 		if (input === 2) {
@@ -406,6 +423,14 @@ function switchBoard(input, current, progress) {
 		
 		//go to slabtown
 		if (input === 1) {
+			progressArray[28] = input;
+			next = "swiss";
+		}
+		if (input === 2) {
+			progressArray[28] = input;
+			next = "swiss";
+		}
+		if (input === 3) {
 			progressArray[28] = input;
 			next = "swiss";
 		}
@@ -609,6 +634,14 @@ function switchBoard(input, current, progress) {
 			progressArray[40] = input;
 			next = "slabtown";
 		}
+		if (input === 2) {
+			progressArray[40] = input;
+			next = "slabtown";
+		}
+		if (input === 3) {
+			progressArray[40] = input;
+			next = "slabtown";
+		}
 	}
 	else if (current === "random3") {
 		//at slabtown
@@ -749,7 +782,7 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[55] = input;
-			next = "castle_village";
+			next = "castle_entrance";
 		}
 	}
 	else if (current === "castle_village") {
@@ -804,12 +837,27 @@ function switchBoard(input, current, progress) {
 			progressArray[60] = input;
 			next = "gutenberg";
 		}
+		if (input === 2) {
+			progressArray[60] = input;
+			next = "gutenberg";
+		}if (input === 3) {
+			progressArray[60] = input;
+			next = "gutenberg";
+		}
 	}
 	else if (current === "gutenberg") {
 		//at slabtown
 		
 		 
 		if (input === 1) {
+			progressArray[61] = input;
+			next = "castle_fight2";
+		}
+		if (input === 2) {
+			progressArray[61] = input;
+			next = "castle_fight2";
+		}
+		if (input === 3) {
 			progressArray[61] = input;
 			next = "castle_fight2";
 		}

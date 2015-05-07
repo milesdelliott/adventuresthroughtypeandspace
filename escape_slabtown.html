@@ -2,6 +2,7 @@
 <div class="slabtown screenview">
   <div class="background"><img src="backgrounds/horsechase.png" alt="Escape from Slabtown"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_chase.png" alt="dan_chase" class="dan_chase"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_chase").attr('src', 'foregrounds/wendy_chase.png');
+  }
 </script>

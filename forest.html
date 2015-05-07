@@ -2,6 +2,7 @@
 <div class="forest screenview">
   <div class="background"><img src="backgrounds/forest.png" alt="The Great Forest"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -12,8 +13,6 @@
       <td class="4">Menu</td>
     </tr>
     <tr class="row2">
-      <td class="2">Examine the path</td>
-      <td class="3">Make Camp</td>
     </tr>
   </table>
 </div>
@@ -32,4 +31,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>

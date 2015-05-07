@@ -1,7 +1,8 @@
 
 <div class="bodoni screenview">
-  <div class="background"><img src="backgrounds/fashion_school.png" alt="At the Fashion School"/></div>
+  <div class="background"><img src="backgrounds/fashion_school.png" alt="At the Fashion School" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_halfback_big.png" alt="dan_halfback_big" class="dan_halfback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -30,4 +31,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_halfback_big").attr('src', 'foregrounds/wendy_halfback_big.png');
+  }
 </script>

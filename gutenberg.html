@@ -2,6 +2,7 @@
 <div class="castle screenview">
   <div class="background"><img src="backgrounds/castle_fight1.png" alt="Gutenberg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_front_big.png" alt="dan_front_big" class="dan_front_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -32,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_front_big").attr('src', 'foregrounds/wendy_front_big.png');
+  }
 </script>

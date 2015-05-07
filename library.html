@@ -2,7 +2,7 @@
 <div class="library screenview">
   <div class="background"><img src="backgrounds/library.png" alt="The Great Library"/></div>
   <div class="foreground">
-    <div class="layer"><img src="foregrounds/garamond.png" alt="garamond" class="garamond"/></div>
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -32,4 +32,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>
