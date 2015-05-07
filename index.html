@@ -68,31 +68,43 @@
       </div>
     </div>
     <div id="menuWrapper">
-      <div id="menu" class="hidden modal"><span>Menu</span><span class="x">X</span>
+      <div id="menu" class="hidden modal">
+        <!--span Menu--><span class="x">X</span>
         <ul class="menuTabs">
           <li> <a href="#c">Character</a></li>
           <li> <a href="#foodMenu">Food</a></li>
-          <li><a href="#weaponMenu">Weapons</a></li>
+          <li><a href="#weaponMenu">Gear</a></li>
+          <li><a href="#itemMenu">Items</a></li>
         </ul>
-        <div id="c">
-          <h2 class="characterName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/DingbatDan.png" alt="Dingbat Dan" class="character">
-          <p class="status"><span class="health">200</span><span class="exp">Exp: 300/500</span></p>
-          <p class="items">Items:<span class="item">,</span><span class="item">$</span><span class="item">*</span><span class="item">H</span></p>
-          <p class="progress"></p>
-          <p class="cookie"></p>
-          <p class="current">current</p>
-          <p class="lc"></p>
-        </div>
-        <div id="foodMenu">
-          <h2 class="menuName">Food</h2>
-        </div>
-        <div id="weaponMenu">
-          <h2 class="menuName">Weapons	</h2>
+        <div id="menuLower">
+          <div id="c">
+            <h2 class="menuName">Dingbat Dan</h2><span class="level">Journeyman Typographer - Level 8</span><img src="foregrounds/dan_front_big.png" alt="Dingbat Dan" class="character">
+            <p class="status"><span class="healthT">Health:</span><span class="health">200</span><span>/</span><span class="healthMax">300</span><br><span class="expT">Exp:</span><span class="exp">300</span><span>/</span><span class="expNext">500</span><br><span class="currentWeapon">Club</span></p>
+            <p class="lc"></p>
+          </div>
+          <div id="foodMenu"><img src="icons/pretzel.png" alt="pretzel" class="itemFood"><img src="icons/coffee.png" alt="coffee" class="itemFood coffee"></div>
+          <div id="weaponMenu"><img src="icons/dagger.png" alt="dagger" class="itemWeapon"><img src="icons/boomerang.png" alt="boomerang" class="itemWeapon"><img src="icons/yen.png" alt="yen" class="itemWeapon selectedItem"><img src="icons/Book.png" alt="book" class="itemWeapon"></div>
+          <div id="itemMenu"><img src="icons/camera.png" alt="camera" class="itemItem"><img src="icons/computer.png" alt="computer" class="itemItem"><img src="icons/mysterybag.png" alt="mysterybag" class="itemItem"><img src="icons/parachute.png" alt="parachute" class="itemItem"><img src="icons/rope.png" alt="rope" class="itemItem"><img src="icons/spurs.png" alt="spurs" class="itemItem"></div>
         </div>
       </div>
       <script>
         $( ".x" ).click(function() {
         		$( "#menu" ).addClass( "hidden" );
+        });
+        $( ".itemFood" ).on( "click", function(evt) {
+        		var eatThis = $( this ).attr("alt");
+        		$( this ).remove();
+        		eatFood(eatThis);
+        });
+        $( ".itemWeapon" ).click(function() {
+        	weapons[$(".selectedItem").attr("alt")].has = false;
+        	$( ".selectedItem" ).removeClass( "selectedItem" );
+        	$( this ).addClass( "selectedItem" );
+        	var weaponThis = $(this).attr("alt");
+        	weapons[weaponThis].has = true;
+        	cStatus.weapon = weaponThis;
+        	$('.currentWeapon').html(cStatus.weapon);
+        		
         });
         $( "#reset" ).click(function() {
         	Cookies.remove('progress', { expires: 15, path: '/'});

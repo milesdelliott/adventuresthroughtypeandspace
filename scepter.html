@@ -27,6 +27,14 @@
   });   
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
+  	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Dan") {
+  	$('.foreground').append($('<div class="layer"><img src="foregrounds/dan_scepter.gif" class="char_scepter" alt="char_scepter" /></div>'));
+  } else {
+  	$('.foreground').append($('<div class="layer"><img src="foregrounds/wendy_scepter.gif" class="char_scepter" alt="char_scepter" /></div>'));
+  }
 </script>

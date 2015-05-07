@@ -52,7 +52,7 @@ function switchBoard(input, current, progress) {
 	}
 	else if (current === "character") {
 		//Begin the Quest
-		
+		cStatus.health = cStatus.maxHealth;
 		//leave the city
 		if (input === 1) {
 			progressArray[12] = input;
@@ -78,12 +78,15 @@ function switchBoard(input, current, progress) {
 		//Go to swamp
 		if (input === 1) {
 			next = "kitchen_pantry";
+			addFood("granola");
 		}
 		if (input === 2) {
 			next = "kitchen_pantry";
+			addFood("cheezits");
 		}
 		if (input === 3) {
 			next = "kitchen_pantry";
+			addFood("gummybears");
 		}
 	}
 	else if (current === "kitchen_pantry") {
@@ -92,12 +95,15 @@ function switchBoard(input, current, progress) {
 		//Go to swamp
 		if (input === 1) {
 			next = "kitchen_fridge";
+			addFood("chips");
 		}
 		if (input === 2) {
 			next = "kitchen_fridge";
+			addFood("cookie");
 		}
 		if (input === 3) {
 			next = "kitchen_fridge";
+			addFood("trailmix");
 		}
 	}
 	else if (current === "kitchen_fridge") {
@@ -106,12 +112,15 @@ function switchBoard(input, current, progress) {
 		//Go to swamp
 		if (input === 1) {
 			next = "kitchen2";
+			addFood("pizza");
 		}
 		if (input === 2) {
 			next = "kitchen2";
+			addFood("soda");
 		}
 		if (input === 3) {
 			next = "kitchen2";
+			addFood("orange");
 		}
 	}
 	else if (current === "kitchen2") {
@@ -821,10 +830,9 @@ function switchBoard(input, current, progress) {
 		}
 	}
 	$( "#wrapper" ).load( next + ".html" );
-	$('.progress').html(progressArray);
-	$('.current').html(saveCurrent);
 	cStatus.health = parseInt(cStatus.health,10) - 10;
 	$('.health').html(cStatus.health);
+	$('.healthMax').html(cStatus.maxHealth);
 	updateHealthBar();
 	Cookies.set('progress', progressArray, { expires: 15, path: '/'});
 	Cookies.set('current', next, { expires: 15, path: '/'});

@@ -53,18 +53,92 @@ function deathHandler() {
 	Cookies.set('current', next, { expires: 15, path: '/'});
 };
 
+function menuGen() {
+	if (charName == "Wendy") {
+		$( '.characterName' ).html("Wingding Wendy");
+		$(".character").attr('src', 'foregrounds/wendy_front_big.png');
+		$(".character").attr('alt', 'Wingding Wendy');
+	}
+}
+
+function addFood(name) {
+	food[name].has = true;
+	$('#foodMenu').append($('<img src="icons/'+name+'.png" alt="'+name+'" class="itemFood '+name+'" //>'));
+};
+
+function eatFood(name) {
+	food[name].has = false;
+	if (cStatus.health + 80 < cStatus.maxHealth) {
+		cStatus.health = parseInt(cStatus.health,10) + 80;
+	} else {
+		cStatus.health = cStatus.maxHealth;
+	}
+	updateHealthBar();
+};
+
 var weapons = {
 	club: {
-			name:"club",
-			text:100,
-	  	icon:"club",
 		damage:20,
-	  	effect:"health",
-		effectValue:30,
-	  	effectTarget:"self",
-		has:false,
+		has:false
+	},
+	dagger: {
+		damage:20,
+		has:false
+	},
+	boomerang: {
+		damage:20,
+		has:false
+	},
+	yen: {
+		damage:20,
+		has:false
+	},
+	book: {
+		damage:20,
+		has:false
+	},
+	dagger: {
+		damage:20,
+		has:false
+	}
+};
+
+var food = {
+	cheezits: {
+		has: false
+	},
+	chips: {
+		has: false
+	},
+	coffee: {
+		has: false
+	},
+	cookie: {
+		has: false
+	},
+	granola: {
+		has: false
+	},
+	gummybears: {
+		has: false
+	},
+	orange: {
+		has: false
+	},
+	pizza: {
+		has: false
+	},
+	pretzel: {
+		has: false
+	},
+	soda: {
+		has: false
+	},
+	trailmix: {
+		has: false
 	},
 };
+
 
 var enemies = {
 	frutiger: {
