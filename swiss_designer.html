@@ -1,7 +1,9 @@
 
 <div class="swiss screenview">
-  <div class="background"><img src="backgrounds/gift.png" alt="Congratulations"/></div>
+  <div class="background"><img src="backgrounds/bank_inner.png" alt="Congratulations" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
+    <div class="layer"><img src="foregrounds/max.png" alt="max" class="max"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -30,4 +32,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>

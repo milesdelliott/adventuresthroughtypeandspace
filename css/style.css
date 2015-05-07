@@ -618,6 +618,43 @@ img.cursor {
   margin-left: 300px;
   position: absolute;
 }
+.swiss .pirate_side_big {
+  position: absolute;
+  height: 300px;
+  margin-top: 150px;
+  margin-left: 230px;
+}
+.swiss .bankpeople {
+  position: absolute;
+  top: 10px;
+  width: 768px;
+}
+.swiss .pirate_front_big {
+  position: absolute;
+  height: 300px;
+  margin-top: 570px;
+  margin-left: 230px;
+}
+.swiss .max {
+  position: absolute;
+  height: 450px;
+  margin-top: 500px;
+  margin-left: 120px;
+}
+.renner {
+  position: absolute;
+  float: left;
+  height: 350px;
+  margin-top: 140px;
+  margin-left: 80px;
+}
+.novarese {
+  position: absolute;
+  float: left;
+  height: 350px;
+  margin-top: 140px;
+  margin-left: 80px;
+}
 .gill {
   height: 400px;
   position: absolute;
@@ -649,7 +686,7 @@ img.cursor {
 .port .spaceship {
   position: absolute;
   width: 100px;
-  margin-top: 495px;
+  margin-top: 520px;
   margin-left: 280px;
 }
 .port-go .spaceship {

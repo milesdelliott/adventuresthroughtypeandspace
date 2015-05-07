@@ -2,17 +2,19 @@
 <div class="swiss screenview">
   <div class="background"><img src="backgrounds/bank_inner.png" alt="Inside the Bank Vault" class="bgimg"/></div>
   <div class="foreground">
+    <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
+    <div class="layer"><img src="foregrounds/pirate_front_big.png" alt="pirate_front_big" class="pirate_front_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">It's the Pirate!</p>
+  <p class="text">He is trying to steal from the vault!</p>
   <table class="control">
     <tr class="row1">
       <td class="1">Stop Him</td>
       <td class="4">Menu</td>
     </tr>
     <tr class="row2">
-      <td class="2">Let him go</td>
+      <td class="2">Pummel</td>
     </tr>
   </table>
 </div>
@@ -31,4 +33,9 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
+</script>
+<script>
+  if (charName === "Wendy") {
+  	$(".dan_quarterback_big").attr('src', 'foregrounds/wendy_quarterback_big.png');
+  }
 </script>
