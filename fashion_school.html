@@ -1,37 +1,51 @@
 
-<div class="bodoni screenview">
-  <div class="background"><img src="backgrounds/fashion_school.png" alt="At the Fashion School" class="bgimg"/></div>
+<div class=" screenview">
+  <div class="background"><img src="backgrounds/fashion_school.png" alt="fashion_school" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_halfback_big.png" alt="dan_halfback_big" class="dan_halfback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text">You are at the Fashion School</p>
+  <p class="text"></p>
   <table class="control">
-    <tr class="row1">
-      <td class="1">Back to Town</td>
+    <tr>
+      <td class="1">What</td>
       <td class="4">Menu</td>
     </tr>
-    <tr class="row2">
+    <tr>
+      <td class="2">What</td>
+      <td class="3">What</td>
     </tr>
   </table>
+  <script>
+    var current = "fashion_school";
+    var convoCurrent = 0;
+    var convo = "convSchool";
+    
+    $('.text').html(convSchool[0][0]);
+    $('.1').html(convSchool[0][1]);
+    $('.2').html(convSchool[0][2]);
+    $('.3').html(convSchool[0][3]);
+    $( ".1" ).on( "click", function(evt) {
+    	convBoard(1, "fashion_school", progressArray, convoCurrent, convSchool);
+    });
+    $( ".2" ).on( "click", function(evt) {
+    	convBoard(2, "fashion_school", progressArray, convoCurrent, convSchool);
+    });
+    $( ".3" ).on( "click", function(evt) {
+    	convBoard(3, "fashion_school", progressArray, convoCurrent, convSchool);
+    });
+    $( ".4" ).on( "click", function(evt) {
+    	menuGen();
+    	$( "#menu" ).toggleClass( "hidden" );
+    	$( '.progress' ).html(progressArray);
+    });
+    
+    
+    
+    
+  </script>
 </div>
-<script>
-  $( ".1" ).on( "click", function(evt) {
-  	switchBoard(1, "fashion_school", progressArray);
-  });
-  $( ".2" ).on( "click", function(evt) {
-  	switchBoard(2, "fashion_school", progressArray);
-  });
-  $( ".3" ).on( "click", function(evt) {
-  	switchBoard(3, "fashion_school", progressArray);
-  });   
-  $( ".4" ).on( "click", function(evt) {
-  	$( "#menu" ).toggleClass( "hidden" )
-  	menuGen();
-  	$( '.progress' ).html(progressArray);
-  });           
-</script>
 <script>
   if (charName === "Wendy") {
   	$(".dan_halfback_big").attr('src', 'foregrounds/wendy_halfback_big.png');

@@ -47,6 +47,7 @@
   <div class="background"><img src="backgrounds/swamp2.png" alt="swamp" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_back_big.png" alt="dan_back_big" class="dan_back_big"/></div>
+    <div class="layer"><img src="foregrounds/cursor.png" alt="cursor" class="cursor"/></div>
   </div>
 </div>
 <div class="controlWrapper">
@@ -80,8 +81,12 @@
     	convBoard(3, "swamp2", progressArray, convoCurrent, fontSwamp);
     });
     $( ".4" ).on( "click", function(evt) {
+    	menuGen();
     	$( "#menu" ).toggleClass( "hidden" );
     	$( '.progress' ).html(progressArray);
     });
+    if (charName === "Wendy") {
+    	$(".dan_back_big").attr('src', 'foregrounds/wendy_back_big.png');
+    }
   </script>
 </div>

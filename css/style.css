@@ -385,6 +385,16 @@ h6 {
   margin-left: 670px;
   height: 60px;
 }
+.swamp .dan_back_big {
+  height: 300px;
+  margin-top: 150px;
+  margin-left: 300px;
+}
+.swamp .cursor {
+  margin-top: -20px;
+  width: 91px;
+  margin-left: 100px;
+}
 .para .wendy_side_medium {
   height: 162px;
   margin-top: 270px;
