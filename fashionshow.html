@@ -1,6 +1,6 @@
 
 <div class="bodoni screenview">
-  <div class="background"><img src="backgrounds/fashionshow.png" alt="At the Fashion Show"/></div>
+  <div class="background"><img src="backgrounds/fashionshow.png" alt="At the Fashion Show" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -8,10 +8,11 @@
   <p class="text">You are at the Fashion Show</p>
   <table class="control">
     <tr class="row1">
-      <td class="1">Go to Slabtown</td>
+      <td class="1">Very nice!</td>
       <td class="4">Menu</td>
     </tr>
     <tr class="row2">
+      <td class="2">Excellent Fashion!</td>
     </tr>
   </table>
 </div>
@@ -30,14 +31,4 @@
   	menuGen();
   	$( '.progress' ).html(progressArray);
   });           
-</script>
-<script>
-  if (!progressArray[75]) {
-  	$(".1").remove();
-  	$(".text").html('You can\'t go to the show until you\'ve gone to school!');
-  	$(".row1").prepend('<td class="2">Go to back to town</td>');
-  	$( ".2" ).on( "click", function(evt) {
-  		switchBoard(2, "fashionshow", progressArray);
-  	});
-  }
 </script>

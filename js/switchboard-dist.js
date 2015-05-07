@@ -621,9 +621,13 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[39] = input;
-			next = "fashionshow";
+			next = "fashion_school";
 		}
 		 if (input === 2) {
+			progressArray[75] = input;
+			next = "fashion_school";
+		}
+		if (input === 3) {
 			progressArray[75] = input;
 			next = "fashion_school";
 		}
@@ -634,7 +638,17 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[73] = input;
-			next = "bodoni";
+			next = "fashionshow";
+		}
+		 
+		if (input === 2) {
+			progressArray[73] = input;
+			next = "fashionshow";
+		}
+		 
+		if (input === 3) {
+			progressArray[73] = input;
+			next = "fashionshow";
 		}
 	}
 	else if (current === "fashionshow") {
@@ -647,7 +661,11 @@ function switchBoard(input, current, progress) {
 		}
 		if (input === 2) {
 			progressArray[74] = input;
-			next = "bodoni";
+			next = "prize";
+		}
+		if (input === 3) {
+			progressArray[74] = input;
+			next = "prize";
 		}
 	}
 	else if (current === "prize") {

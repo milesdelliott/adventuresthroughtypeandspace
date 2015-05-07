@@ -1,12 +1,57 @@
 
-<div class=" screenview">
+<div class="bodoni screenview">
+  <script>
+    var convSchool = [
+    	[
+    		'<span class="quote">"Fashion school is not for the weak of heart. We will be teaching a rigorous course in combining typefaces for the most elegant of designs."</span>',
+    		'…',
+    		'…',
+    		'…',
+    		1,
+    		1,
+    		1,
+    		0
+    	],
+    	[
+    		'<span class="quote">"Pick the best typeface combination."</span>',
+    		'2&3',
+    		'5&6',
+    		'2x4',
+    		2,
+    		2,
+    		2,
+    		0
+    	],
+    	[
+    		'<span class="quote">"Incorrect. Those letterforms are each decorative and too distinct on their own. Try to find letters that are simpler, like a serif and a sans serif together"</span>',
+    		'2&4',
+    		'4&5',
+    		'3&4',
+    
+    		3,
+    		3,
+    		3,
+    		0
+    	],
+    	[
+    		'<span class="quote"> "Correct! The serifs of Bodoni work very well with curved Sans serif typefaces like this one. You are ready for the fashion show." </span>',
+    	  'Go',
+    	  'I\'ll pass',
+    	  'Coming',
+    	  4,
+    	  4,
+    	  5,
+    	  1
+    	  ],
+    ]
+  </script>
   <div class="background"><img src="backgrounds/fashion_school.png" alt="fashion_school" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_halfback_big.png" alt="dan_halfback_big" class="dan_halfback_big"/></div>
   </div>
 </div>
 <div class="controlWrapper">
-  <p class="text"></p>
+  <p class="text"><span class="quote">"Fashion school is not for the weak of heart. We will be teaching a rigorous course in combining typefaces for the most elegant of designs."</span></p>
   <table class="control">
     <tr>
       <td class="1">What</td>
@@ -21,7 +66,6 @@
     var current = "fashion_school";
     var convoCurrent = 0;
     var convo = "convSchool";
-    
     $('.text').html(convSchool[0][0]);
     $('.1').html(convSchool[0][1]);
     $('.2').html(convSchool[0][2]);
