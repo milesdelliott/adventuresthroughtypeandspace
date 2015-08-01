@@ -192,13 +192,13 @@ th {
 }
 html,
 body {
-  background: #333;
+  background: url("../backgrounds/letterbgdark.png") repeat;
   height: 100%;
 }
 html {
   font-size: 1em;
   font-family: 'Lato';
-  background-color: #333;
+  background-color: #000;
   color: #484848;
   overflow-x: hidden;
 }
@@ -265,7 +265,7 @@ h6 {
   vertical-align: middle;
   margin: 0 auto;
   padding: 5rem 0;
-  background-color: #333;
+  background: none;
   font-size: 1.125rem;
   text-align: center;
   border: 0.625rem solid #000;
@@ -300,6 +300,26 @@ h6 {
   width: 46%;
   position: absolute;
   text-align: center;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -webkit-animation: buttonflash 1s infinite;
+  -moz-animation: buttonflash 1s infinite;
+  -o-animation: buttonflash 1s infinite;
+  -ms-animation: buttonflash 1s infinite;
+  animation: buttonflash 1s infinite;
+}
+.control tr td:hover {
+  border: solid 3px #fa0;
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  -ms-animation: none;
+  animation: none;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  cursor: cell;
 }
 .control tr td:nth-child(even) {
   right: 0;
@@ -333,6 +353,7 @@ h6 {
 }
 .screenview {
   height: 463px;
+  cursor: not-allowed;
 }
 .quote {
   font-family: "silkscreennormal";
@@ -343,7 +364,6 @@ h6 {
   width: 848px;
   height: 100%;
   margin: 0 auto;
-  background: #000;
   padding: 20px 40px;
 }
 #logo {
@@ -452,6 +472,11 @@ img.cursor {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+@media only screen and (max-width: 1140px) {
+  #logo {
+    display: none;
+  }
 }
 .garamond {
   width: 600px;
@@ -825,6 +850,23 @@ img.cursor {
     margin-top: -1100px;
   }
 }
+@-webkit-keyframes buttonflash {
+  0% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+  50% {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+}
 @-webkit-keyframes touchdown {
   from {
     margin-top: -1100px;
@@ -939,6 +981,7 @@ img.gutenberg {
   text-align: right;
   float: right;
   margin: 10px;
+  cursor: cell;
 }
 .menuTabs {
   width: 100%;
@@ -954,12 +997,14 @@ img.gutenberg {
   display: inline-block;
   height: 100%;
   margin-top: 10px;
+  cursor: cell;
 }
 .menuTabs li a {
   border-right: solid 3px #fff;
   border-bottom: solid 0 transparent;
   padding: 7px 10px 7px 10px;
   margin-left: -8px;
+  cursor: cell;
 }
 .menuTabs li a:hover {
   background: #fff;
@@ -987,6 +1032,7 @@ img.gutenberg {
   color: #fff;
   margin: 5px;
   background: #558;
+  cursor: cell;
 }
 .itemWeapon {
   border: solid 3px #fff;
@@ -995,6 +1041,7 @@ img.gutenberg {
   color: #fff;
   margin: 5px;
   background: #855;
+  cursor: cell;
 }
 .itemItem {
   border: solid 3px #fff;
@@ -1003,6 +1050,7 @@ img.gutenberg {
   color: #fff;
   margin: 5px;
   background: #585;
+  cursor: cell;
 }
 .selectedItem {
   background: #fff;
@@ -1754,6 +1802,74 @@ img.gutenberg {
   }
   to {
     margin-top: 157px;
+  }
+}
+@-moz-keyframes buttonflash {
+  0% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+  50% {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+}
+@-webkit-keyframes buttonflash {
+  0% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+  50% {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+}
+@-o-keyframes buttonflash {
+  0% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+  50% {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+}
+@keyframes buttonflash {
+  0% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+  }
+  50% {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
   }
 }
 @-moz-keyframes upanddown {
