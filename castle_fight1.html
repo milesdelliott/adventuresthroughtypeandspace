@@ -1,6 +1,6 @@
 
 <div class="castle screenview">
-  <div class="background"><img src="backgrounds/castle_fight1.png" alt="Fight!"/></div>
+  <div class="background"><img src="backgrounds/castle_fight1.png" alt="Fight!" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
     <div class="layer"><img src="foregrounds/pirate_front_big.png" alt="pirate_front_big" class="pirate_front_big"/></div>
@@ -27,12 +27,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "castle_fight1", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Wendy") {

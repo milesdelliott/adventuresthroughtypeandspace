@@ -1,6 +1,6 @@
 
 <div class="castle screenview">
-  <div class="background"><img src="backgrounds/castle_entrance.png" alt="The Entrance to Castle Gutenberg"/></div>
+  <div class="background"><img src="backgrounds/castle_entrance.png" alt="The Entrance to Castle Gutenberg" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -24,10 +24,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "castle_entrance", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

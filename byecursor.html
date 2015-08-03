@@ -1,6 +1,6 @@
 
 <div class="byecursor screenview">
-  <div class="background"><img src="backgrounds/byecursor.png" alt="Departure of the Cursor"/></div>
+  <div class="background"><img src="backgrounds/byecursor.png" alt="Departure of the Cursor" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_side_big.png" alt="dan_side_big" class="dan_side_big"/></div>
     <div class="layer"><img src="foregrounds/cursor.png" alt="cursor" class="cursor"/></div>
@@ -28,12 +28,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "byecursor", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Wendy") {

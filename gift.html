@@ -1,6 +1,6 @@
 
 <div class="city screenview">
-  <div class="background"><img src="backgrounds/gift.png" alt="Get a Gift"/></div>
+  <div class="background"><img src="backgrounds/gift.png" alt="Get a Gift" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -26,10 +26,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "gift", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

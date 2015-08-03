@@ -1,6 +1,6 @@
 
 <div class="city screenview">
-  <div class="background"><img src="backgrounds/ocrb_approach.png" alt="The City"/></div>
+  <div class="background"><img src="backgrounds/ocrb_approach.png" alt="The City" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -24,12 +24,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "city_intro", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (progressArray[17] === 1) {

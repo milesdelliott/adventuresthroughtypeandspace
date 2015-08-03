@@ -1,6 +1,6 @@
 
 <div class="city screenview">
-  <div class="background"><img src="backgrounds/city.png" alt="The City"/></div>
+  <div class="background"><img src="backgrounds/city.png" alt="The City" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/frutiger3-01.png" alt="frutiger3-01" class="frutiger3-01"/></div>
   </div>
@@ -25,10 +25,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "city_fight2", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

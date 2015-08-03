@@ -1,6 +1,6 @@
 
 <div class="para screenview">
-  <div class="background"><img src="backgrounds/para2.png" alt="Paratrooper"/></div>
+  <div class="background"><img src="backgrounds/para2.png" alt="Paratrooper" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/wendy_side_medium.png" alt="wendy_side_medium" class="wendy_side_medium"/></div>
   </div>
@@ -26,12 +26,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "para2", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Dan") {

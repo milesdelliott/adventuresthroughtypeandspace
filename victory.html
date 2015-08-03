@@ -1,6 +1,6 @@
 
 <div class="castle screenview">
-  <div class="background"><img src="backgrounds/throne.png" alt="Victory"/></div>
+  <div class="background"><img src="backgrounds/throne.png" alt="Victory" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -26,10 +26,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "victory", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

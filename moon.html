@@ -1,6 +1,6 @@
 
 <div class="moon screenview">
-  <div class="background"><img src="backgrounds/moon.png" alt="Luna"/></div>
+  <div class="background"><img src="backgrounds/moon.png" alt="Luna" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/spaceship.png" alt="spaceship" class="spaceship"/></div>
   </div>
@@ -25,10 +25,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "moon", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

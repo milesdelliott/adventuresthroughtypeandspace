@@ -1,6 +1,6 @@
 
 <div class="fridge screenview">
-  <div class="background"><img src="backgrounds/kitchen_fridge.png" alt="Your Kitchen"/></div>
+  <div class="background"><img src="backgrounds/kitchen_fridge.png" alt="Your Kitchen" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_quarterback_big.png" alt="dan_quarterback_big" class="dan_quarterback_big"/></div>
   </div>
@@ -27,12 +27,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "kitchen_fridge", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Wendy") {

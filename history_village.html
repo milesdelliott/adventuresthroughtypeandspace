@@ -1,6 +1,6 @@
 
 <div class="castle_village screenview">
-  <div class="background"><img src="backgrounds/history_village.png" alt="The Village of Castle Gutenberg History"/></div>
+  <div class="background"><img src="backgrounds/history_village.png" alt="The Village of Castle Gutenberg History" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -26,10 +26,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "history_village", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

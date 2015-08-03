@@ -1,6 +1,6 @@
 
 <div class="hirez screenview">
-  <div class="background"><img src="backgrounds/bed.png" alt="A Hospital in Hi Rez"/></div>
+  <div class="background"><img src="backgrounds/bed.png" alt="A Hospital in Hi Rez" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/wendy_cast.png" alt="wendy_cast" class="wendy_cast"/></div>
   </div>
@@ -25,12 +25,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "hospital", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Dan") {

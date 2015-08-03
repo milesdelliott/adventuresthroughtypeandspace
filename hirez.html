@@ -1,6 +1,6 @@
 
 <div class="hirez screenview">
-  <div class="background"><img src="backgrounds/hirez.png" alt="Hi-Rez"/></div>
+  <div class="background"><img src="backgrounds/hirez.png" alt="Hi-Rez" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/dan_side_small.png" alt="dan_side_small" class="dan_side_small"/></div>
     <div class="layer"><img src="foregrounds/cursor_small.png" alt="cursor_small" class="cursor_small"/></div>
@@ -26,12 +26,12 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "hirez", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
 <script>
   if (charName === "Wendy") {

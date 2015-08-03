@@ -1,6 +1,6 @@
 
 <div class="wild screenview">
-  <div class="background"><img src="backgrounds/random.png" alt="RANDOM ENCOUNTER"/></div>
+  <div class="background"><img src="backgrounds/random.png" alt="RANDOM ENCOUNTER" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -25,10 +25,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "random1", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

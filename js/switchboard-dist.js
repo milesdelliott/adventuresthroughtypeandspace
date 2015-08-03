@@ -510,11 +510,11 @@ function switchBoard(input, current, progress) {
 		 
 		if (input === 1) {
 			progressArray[33] = input;
-			next = "voyage_gill";
+			next = "mountain";
 		}
 		if (input === 2) {
 			progressArray[33] = input;
-			next = "voyage_gill";
+			next = "mountain";
 		}
 		if (input === 3) {
 			progressArray[33] = input;

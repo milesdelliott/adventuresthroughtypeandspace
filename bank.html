@@ -1,6 +1,6 @@
 
 <div class="swiss screenview">
-  <div class="background"><img src="backgrounds/bank_inner.png" alt="Inside the Bank Vault"/></div>
+  <div class="background"><img src="backgrounds/bank_inner.png" alt="Inside the Bank Vault" class="bgimg"/></div>
   <div class="foreground">
   </div>
 </div>
@@ -25,10 +25,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "bank_inner", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>

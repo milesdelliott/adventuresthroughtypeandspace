@@ -1,6 +1,6 @@
 
 <div class="port screenview">
-  <div class="background"><img src="backgrounds/port_futura.png" alt="Port Futura"/></div>
+  <div class="background"><img src="backgrounds/port_futura.png" alt="Port Futura" class="bgimg"/></div>
   <div class="foreground">
     <div class="layer"><img src="foregrounds/renner.png" alt="renner" class="renner"/></div>
     <div class="layer"><img src="foregrounds/spaceship.png" alt="spaceship" class="spaceship"/></div>
@@ -28,10 +28,10 @@
   });
   $( ".3" ).on( "click", function(evt) {
   	switchBoard(3, "port_futura", progressArray);
-  });   
+  });
   $( ".4" ).on( "click", function(evt) {
   	$( "#menu" ).toggleClass( "hidden" )
   	menuGen();
   	$( '.progress' ).html(progressArray);
-  });           
+  });
 </script>
